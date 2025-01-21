@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float _dashMultiplier = 2;
 
+    [Header("Visuals")]
+    [SerializeField] private Transform _playerSpriteTransform;
+
+    [SerializeField] private Animator _playerAnimator;
+
     public void SetLookAtTarget(Transform transform)
     {
         _lookAtTarget = transform;
@@ -25,6 +30,8 @@ public class Player : MonoBehaviour
 
     public void DoPlayerGotHit(Transform gotHitFrom)
     {
+        _playerAnimator.SetTrigger("gotDamage");
+
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         StartCoroutine(DoKickBackEffect(gotHitFrom));
 
@@ -35,23 +42,23 @@ public class Player : MonoBehaviour
         }
         _playerHealthLeft.fillAmount = (float)_playerHealth / 100;
 
-        GetComponent<SpriteRenderer>().color = Color.white;
-        if (_returnBackToOriginalColorCO == null)
-        {
-            _returnBackToOriginalColorCO = StartCoroutine(ReturnBackToOriginalColor());
-        }
-        else
-        {
-            StopCoroutine(_returnBackToOriginalColorCO);
-            _returnBackToOriginalColorCO = StartCoroutine(ReturnBackToOriginalColor());
-        }
+        //GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        //if (_returnBackToOriginalColorCO == null)
+        //{
+        //    _returnBackToOriginalColorCO = StartCoroutine(ReturnBackToOriginalColor());
+        //}
+        //else
+        //{
+        //    StopCoroutine(_returnBackToOriginalColorCO);
+        //    _returnBackToOriginalColorCO = StartCoroutine(ReturnBackToOriginalColor());
+        //}
     }
 
-    private IEnumerator ReturnBackToOriginalColor()
-    {
-        yield return new WaitForSeconds(.1f);
-        GetComponent<SpriteRenderer>().color = new Color(0, 0.6941177f, 0.937255f, 1f);
-    }
+    //private IEnumerator ReturnBackToOriginalColor()
+    //{
+    //    yield return new WaitForSeconds(.1f);
+    //    GetComponentInChildren<SpriteRenderer>().color = new Color(0, 0.6941177f, 0.937255f, 1f);
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -71,18 +78,55 @@ public class Player : MonoBehaviour
     private void MoveCharacter()
     {
         Vector2 inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 lookDirection = mousePos - (Vector2)this.transform.position;
+
+        //Debug.Log($"vector2Dot {Vector2.Dot(inputVector, lookDirection)}");
+        if (Vector2.Dot(inputVector, lookDirection) < 0)
+        {
+            _playerAnimator.SetFloat("speedMultiplier", -1);
+        }
+        else
+        {
+            _playerAnimator.SetFloat("speedMultiplier", 1);
+        }
+
+        _playerAnimator.SetBool("isWalking", inputVector != Vector2.zero);
         _rigidbody.velocity = inputVector.normalized * _speed;
     }
 
     private void LookAtTheMouse()
     {
+        //Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //transform.up = mousePos - new Vector2(transform.position.x, transform.position.y);
+
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.up = mousePos - new Vector2(transform.position.x, transform.position.y);
+
+        if (mousePos.x - transform.position.x > 0)
+        {
+            _playerSpriteTransform.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            _playerSpriteTransform.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        //Debug.Log(mousePos.x - transform.position.x > 0);
     }
 
     private void LookAtTargetPosition()
     {
-        transform.up = (Vector2)_lookAtTarget.transform.position - new Vector2(transform.position.x, transform.position.y);
+        Vector2 targetTransform = _lookAtTarget.transform.position;
+
+        if (targetTransform.x - transform.position.x > 0)
+        {
+            _playerSpriteTransform.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            _playerSpriteTransform.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        //transform.up = (Vector2)_lookAtTarget.transform.position - new Vector2(transform.position.x, transform.position.y);
     }
 
     public void DisableControls()

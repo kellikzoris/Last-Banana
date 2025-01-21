@@ -24,7 +24,7 @@ public class EnemyLoop : MonoBehaviour
     private float timeBetweenSpawningMinions = 1f;
     private Coroutine spawnMinionCO = null;
 
-    bool isSpawningShields = false;
+    private bool isSpawningShields = false;
 
     [Serializable]
     public class EnemyMovement
@@ -56,7 +56,7 @@ public class EnemyLoop : MonoBehaviour
 
         public float timeBetweenSpawningMinions;
 
-        [Space (10)]
+        [Space(10)]
         public bool isSpawningShield;
     }
 
@@ -66,6 +66,11 @@ public class EnemyLoop : MonoBehaviour
     [SerializeField] private List<EnemyMovement> enemyMovements;
     [SerializeField] private List<EnemyMovement> enemyMovementsForTheSecondPhase;
     [SerializeField] private List<EnemyMovement> enemyMovementsForTheThirdPhase;
+
+    [Header("Visuals")]
+    [SerializeField] private Transform _enemySpriteTransform;
+
+    [SerializeField] private Animator _enemyAnimator;
 
     private void Start()
     {
@@ -111,6 +116,15 @@ public class EnemyLoop : MonoBehaviour
         }
 
         isMoving = currentEnemyMovement.isMoving;
+
+        if (isMoving)
+        {
+            _enemyAnimator.SetBool("isWalking", true);
+        }
+        else
+        {
+            _enemyAnimator.SetBool("isWalking", false);
+        }
 
         isShootingToPlayer = currentEnemyMovement.isShootingToPlayer;
 
@@ -171,7 +185,17 @@ public class EnemyLoop : MonoBehaviour
 
     private void LookAtTargetVector3()
     {
-        transform.up = (Vector2)targetPosition - new Vector2(transform.position.x, transform.position.y);
+        //transform.up = (Vector2)targetPosition - new Vector2(transform.position.x, transform.position.y);
+        Vector2 targetTransform = targetPosition;
+
+        if (targetTransform.x - transform.position.x > 0)
+        {
+            _enemySpriteTransform.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            _enemySpriteTransform.transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     private void Update()

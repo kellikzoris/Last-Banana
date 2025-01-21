@@ -12,6 +12,8 @@ public class EnemyDashingThroughScreen : MonoBehaviour
     Vector3 startPosition;
     bool dashThroughScreenIsFinished = false;
 
+    [SerializeField] Transform _enemySpriteTransform;
+
     public void DashThroughScreen()
     {
         dashThroughScreenIsFinished = false;
@@ -52,20 +54,32 @@ public class EnemyDashingThroughScreen : MonoBehaviour
 
     private void DisableThisObject()
     {
-        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponentInChildren<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
     }
 
     private void EnableThisObject()
     {
-        GetComponent<SpriteRenderer>().enabled = true;
+        GetComponentInChildren<SpriteRenderer>().enabled = true;
         GetComponent<Collider2D>().enabled = true;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     private void LookAtTargetVector3()
     {
-        transform.up = (Vector2)targetPosition - new Vector2(transform.position.x, transform.position.y);
+        //transform.up = (Vector2)targetPosition - new Vector2(transform.position.x, transform.position.y);
+
+
+        Vector2 targetTransform = targetPosition;
+
+        if (targetTransform.x - transform.position.x > 0)
+        {
+            _enemySpriteTransform.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            _enemySpriteTransform.transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     private void Update()

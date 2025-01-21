@@ -59,6 +59,7 @@ public class Banana : MonoBehaviour
 
     public void ThrowBananaDirectional(Vector2 startThrowPosition, Transform targetTransform = null, float throwPower = 1)
     {
+        FindObjectOfType<Player>().GetComponentInChildren<Animator>().SetTrigger("isAttacking");
         _isBananaOnGround = false;
 
         StartCoroutine(DisableWithDelay());
