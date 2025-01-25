@@ -45,7 +45,7 @@ public class LineRendererDrawer : MonoBehaviour
         if (hitInfo)
         {
             tipOfTheLineRender = hitInfo.point;
-            if (hitInfo.collider.tag.Contains("enemy"))
+            if (hitInfo.collider.tag == "enemy")
             {
                 trajectoryTimeOnTarget += Time.deltaTime;
                 lineRenderer.material.color = Color.Lerp(Color.white, Color.red, trajectoryTimeOnTarget / 2);
@@ -104,12 +104,12 @@ public class LineRendererDrawer : MonoBehaviour
         }
 
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ToggleLockedOnTarget();
         }
 #endif
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             if (!lockedOnTarget)
             {
@@ -117,10 +117,7 @@ public class LineRendererDrawer : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(1))
-        {
-        }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(1))
         {
             float lengthOfLineRenderer = Vector2.Distance(lineRenderer.GetPosition(1), lineRenderer.GetPosition(0));
             lineRenderer.positionCount = 0;
@@ -154,7 +151,12 @@ public class LineRendererDrawer : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonDown(0))
+        {
+            FindObjectOfType<PlayerSpriteAnimatorListener>(true).DoMeleeAttack();
+        }
+
+        if (Input.GetMouseButtonUp(0))
         {
         }
     }

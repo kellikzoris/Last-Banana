@@ -154,6 +154,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         _speed /= _dashMultiplier;
         _dashCoroutine = null;
+
     }
 
     private void Update()
@@ -179,7 +180,7 @@ public class Player : MonoBehaviour
             StartCoroutine(DoKickBackEffect(enemy.transform));
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (_dashCoroutine == null)
             {

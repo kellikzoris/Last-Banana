@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Minion : MonoBehaviour
@@ -5,6 +6,7 @@ public class Minion : MonoBehaviour
     private bool isMoving = false;
     private Transform targetTransform = null;
     [SerializeField] private float movementSpeed = 5;
+    [SerializeField] private Transform _minionSpriteTransform;
 
     public void StartMovingTowardsTarget()
     {
@@ -31,13 +33,28 @@ public class Minion : MonoBehaviour
         }
     }
 
+    private void LookAtTargetVector3()
+    {
+        Vector2 targetTransformLocal = (Vector2)targetTransform.transform.position;
+
+        if (targetTransformLocal.x - transform.position.x > 0)
+        {
+            _minionSpriteTransform.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            _minionSpriteTransform.transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
     private void Update()
     {
         if (isMoving)
         {
             float step = movementSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetTransform.position, step);
-            LookAtTargetPosition();
+            LookAtTargetVector3();
+            //LookAtTargetPosition();
         }
     }
 }

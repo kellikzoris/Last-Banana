@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,27 +26,40 @@ public class EnemyLoop : MonoBehaviour
     private Coroutine spawnMinionCO = null;
 
     private bool isSpawningShields = false;
+    private bool isChargeAttackRun;
 
     [Serializable]
     public class EnemyMovement
     {
+        public string name;
+
+        [Space(10)]
+        public bool isChargeAttackRun;
+
+        [Space(10)]
         public float timeForThisAction;
+
         public bool isEndConditionForReachingTarget;
 
         [Space(10)]
         public bool isMoving;
 
+        [EnableIf("isMoving")]
         public float movementSpeed;
+
+        [EnableIf("isMoving")]
         public Vector2 targetPosition;
 
         [Space(10)]
         public bool isShootingToPlayer;
 
+        [EnableIf("isShootingToPlayer")]
         public float timeBetweenShots;
 
         [Space(10)]
         public bool isShootingAllDirection;
 
+        [EnableIf("isShootingAllDirection")]
         public float timeBetweenAllDirectionShots;
 
         [Space(10)]
@@ -54,6 +68,7 @@ public class EnemyLoop : MonoBehaviour
         [Space(10)]
         public bool isSpawningMinions;
 
+        [EnableIf("isSpawningMinions")]
         public float timeBetweenSpawningMinions;
 
         [Space(10)]
@@ -117,13 +132,33 @@ public class EnemyLoop : MonoBehaviour
 
         isMoving = currentEnemyMovement.isMoving;
 
-        if (isMoving)
+        isChargeAttackRun = currentEnemyMovement.isChargeAttackRun;
+
+        if (!isChargeAttackRun)
         {
-            _enemyAnimator.SetBool("isWalking", true);
+            if (isMoving)
+            {
+                _enemyAnimator.SetBool("isWalking", true);
+            }
+            else
+            {
+                _enemyAnimator.SetBool("isWalking", false);
+                _enemyAnimator.SetBool("chargeAttackRun", false);
+            }
         }
-        else
+
+        if (isChargeAttackRun)
         {
-            _enemyAnimator.SetBool("isWalking", false);
+            if (isMoving)
+            {
+                _enemyAnimator.SetBool("chargeAttackRun", true);
+            }
+            else
+            {
+                _enemyAnimator.SetBool("isWalking", false);
+
+                _enemyAnimator.SetBool("chargeAttackRun", false);
+            }
         }
 
         isShootingToPlayer = currentEnemyMovement.isShootingToPlayer;

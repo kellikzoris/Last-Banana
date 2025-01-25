@@ -26,6 +26,9 @@ public class EnemyWeapon : MonoBehaviour
         Vector3 projectileShootOffsetValue = direction * radius;
 
         EnemyProjectile newProjectile = Instantiate(_enemyProjectile, this.transform.position + projectileShootOffsetValue, Quaternion.identity);
+
+        newProjectile.transform.up = (Vector2)_player.transform.position - new Vector2(transform.position.x, transform.position.y);
+
         //Debug.Break();
         newProjectile.gameObject.SetActive(true);
         newProjectile.ShootToTarget(_player.transform);
@@ -54,11 +57,23 @@ public class EnemyWeapon : MonoBehaviour
         for (int i = 0; i < points.Length; i++)
         {
             EnemyProjectile newProjectile = Instantiate(_enemyProjectile, points[i], Quaternion.identity);
+            Vector3 actualDirection = (points[i] - this.transform.position).normalized;
+
+            newProjectile.transform.up = actualDirection;
+
             newProjectile.gameObject.SetActive(true);
 
             Vector3 targetDirection = (points[i] - this.transform.position).normalized;
             newProjectile.ShootWithoutTarget(targetDirection);
         }
+    }
+
+    public void StompAttack(float stompMaxScale)
+    {
+        Debug.Log("StompAttack");
+        GetComponentInChildren<StompAttack>().SetStompParameter(stompMaxScale);
+        GetComponentInChildren<Animator>().SetTrigger("isJumping");
+
     }
 
     public void SpawnEnemyShield()
@@ -148,10 +163,15 @@ public class EnemyWeapon : MonoBehaviour
             SpawnEnemyShield();
         }
 
-        //if (Input.GetKeyDown(KeyCode.L))
-        //{
-        //    SpawnMinion();
-        //}
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SpawnEnemyShield();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            StompAttack(.3f);
+        }
+
 #endif
     }
 }

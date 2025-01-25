@@ -85,15 +85,15 @@ public class Banana : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ThrowBanana(true);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    ThrowBanana(true);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            ThrowBanana(false);
-        }
+        //if (Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    ThrowBanana(false);
+        //}
 
         float throwSpeed = _throwSpeed * 3000 * Time.deltaTime / _radius;
 
