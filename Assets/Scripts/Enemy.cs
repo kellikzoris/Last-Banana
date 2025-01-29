@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Image _enemyHealthLeft;
     private Coroutine _returnBackToOriginalColorCO;
 
-    [SerializeField] Animator _enemyAnimator;
+    [SerializeField] private Animator _enemyAnimator;
 
     public void DoEnemyGotHit()
     {
@@ -25,21 +25,6 @@ public class Enemy : MonoBehaviour
         }
         _enemyHealthTextField.text = $"Enemy Health: {_enemyHealth}";
         _enemyHealthLeft.fillAmount = (float)_enemyHealth / 100;
-
-        //Debug.Log($"_enemyHealthLeft.fillAmount: {_enemyHealth / 100}");
-        //Debug.Log($"_enemyHealthLeft.fillAmount: {_enemyHealthLeft.fillAmount}");
-
-        //GetComponentInChildren<SpriteRenderer>().color = Color.white;
-
-        //if (_returnBackToOriginalColorCO == null)
-        //{
-        //    _returnBackToOriginalColorCO = StartCoroutine(ReturnBackToOriginalColor());
-        //}
-        //else
-        //{
-        //    StopCoroutine(_returnBackToOriginalColorCO);
-        //    _returnBackToOriginalColorCO = StartCoroutine(ReturnBackToOriginalColor());
-        //}
     }
 
     public int GetEnemyHealth()
@@ -54,10 +39,4 @@ public class Enemy : MonoBehaviour
             collision.transform.GetComponent<Player>().DoPlayerGotHit(this.transform);
         }
     }
-
-    //private IEnumerator ReturnBackToOriginalColor()
-    //{
-    //    yield return new WaitForSeconds(.1f);
-    //    GetComponentInChildren<SpriteRenderer>().color = Color.red;
-    //}
 }

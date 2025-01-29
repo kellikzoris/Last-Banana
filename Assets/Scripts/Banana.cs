@@ -74,6 +74,9 @@ public class Banana : MonoBehaviour
             _centerPosition = targetTransform.position;
         }
         GetComponent<Rigidbody2D>().velocity = (_centerPosition - this.transform.position).normalized * _throwSpeed * throwPower;
+        Debug.Log($"ThrowSpeedOfBanana {(_centerPosition - this.transform.position).normalized * _throwSpeed * throwPower} and {_throwSpeed} and" +
+            $"{throwPower}");
+
         GetComponent<Rigidbody2D>().angularVelocity = 50 * 30;
     }
 
@@ -138,6 +141,10 @@ public class Banana : MonoBehaviour
             if (collision.transform.CompareTag("minion"))
             {
                 collision.transform.GetComponent<Minion>().DisableThis();
+            }
+            if (collision.transform.CompareTag("ShadowTiger"))
+            {
+                collision.transform.GetComponent<ShadowTigerEnemy>().DoEnemyGotHit();
             }
 
             this.gameObject.SetActive(false);

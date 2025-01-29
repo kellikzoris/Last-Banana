@@ -1,20 +1,41 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageZone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag.Contains("Player"))
         {
-            collision.transform.GetComponent<Player>().DoPlayerGotHit(this.transform);
+            if (this.gameObject.tag == "GorillaTrap")
+            {
+                collision.transform.GetComponent<Player>().DoPlayerGotHitWithDelay(this.transform, .1f);
+                GetComponent<Animator>().SetTrigger("TriggerGorillaTrap");
+            }
+            else
+            {
+                collision.transform.GetComponent<Player>().DoPlayerGotHit(this.transform);
+            }
         }
+    }
+
+    public void CallDisableGameObjectWithDelay()
+    {
+        StartCoroutine(DisableGameObjectWithDelay(7));
+    }
+
+    private IEnumerator DisableGameObjectWithDelay(float delayAmount)
+    {
+        yield return new WaitForSeconds(delayAmount);
+        DisableThisGameObject(0);
+    }
+
+    public void DisableThisGameObject(int i)
+    {
+        this.gameObject.SetActive(false);
     }
 }

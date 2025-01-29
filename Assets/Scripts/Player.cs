@@ -16,12 +16,16 @@ public class Player : MonoBehaviour
     private Transform _lookAtTarget;
     private Coroutine _dashCoroutine;
 
+    [Header("Dash Parameters")]
     [SerializeField] private float _dashMultiplier = 2;
+
+    [SerializeField][Range(.01f, .5f)] private float _dashDuration;
 
     [Header("Visuals")]
     [SerializeField] private Transform _playerSpriteTransform;
 
     [SerializeField] private Animator _playerAnimator;
+    [SerializeField] private ParticleSystem _dashTrail;
 
     public void SetLookAtTarget(Transform transform)
     {
@@ -41,24 +45,21 @@ public class Player : MonoBehaviour
             Debug.Log("Player already eliminated");
         }
         _playerHealthLeft.fillAmount = (float)_playerHealth / 100;
-
-        //GetComponentInChildren<SpriteRenderer>().color = Color.white;
-        //if (_returnBackToOriginalColorCO == null)
-        //{
-        //    _returnBackToOriginalColorCO = StartCoroutine(ReturnBackToOriginalColor());
-        //}
-        //else
-        //{
-        //    StopCoroutine(_returnBackToOriginalColorCO);
-        //    _returnBackToOriginalColorCO = StartCoroutine(ReturnBackToOriginalColor());
-        //}
     }
 
-    //private IEnumerator ReturnBackToOriginalColor()
-    //{
-    //    yield return new WaitForSeconds(.1f);
-    //    GetComponentInChildren<SpriteRenderer>().color = new Color(0, 0.6941177f, 0.937255f, 1f);
-    //}
+    private IEnumerator DoPlayerGotHitWithDelayCO(Transform gotHitFrom, float delayAmount)
+    {
+        _rigidbody.velocity = Vector2.zero;
+        _enableControls = false;
+        yield return new WaitForSeconds(delayAmount);
+        DoPlayerGotHit(gotHitFrom);
+        _enableControls = true;
+    }
+
+    public void DoPlayerGotHitWithDelay(Transform gotHitFrom, float delayAmount)
+    {
+        StartCoroutine(DoPlayerGotHitWithDelayCO(gotHitFrom, delayAmount));
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -150,11 +151,13 @@ public class Player : MonoBehaviour
 
     private IEnumerator DoDashCoroutine()
     {
+        _dashTrail.gameObject.SetActive(true);
         _speed *= _dashMultiplier;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(_dashDuration);
         _speed /= _dashMultiplier;
-        _dashCoroutine = null;
+        _dashTrail.gameObject.SetActive(false);
 
+        _dashCoroutine = null;
     }
 
     private void Update()

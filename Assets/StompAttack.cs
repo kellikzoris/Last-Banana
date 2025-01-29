@@ -4,7 +4,7 @@ public class StompAttack : MonoBehaviour
 {
     [SerializeField] private bool _isStomping = false;
     [SerializeField] private float _stompSpeed;
-    [SerializeField] Vector3 _targetStompScale = Vector3.one;
+    [SerializeField] private Vector3 _targetStompScale = Vector3.one;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,7 +17,6 @@ public class StompAttack : MonoBehaviour
 
     public void StartStomping()
     {
-        _isStomping = false;
         this.transform.localScale = Vector3.zero;
         _isStomping = true;
     }

@@ -6,11 +6,17 @@ using UnityEngine;
 
 public class EnemyLoop : MonoBehaviour
 {
+    [SerializeField] private Player _playerTransform;
     [SerializeField] private float speed;
 
     private Vector3 targetPosition = Vector2.zero;
 
     [SerializeField] private EnemyWeapon enemyWeapon;
+
+    [SerializeField] private ShadowTigerManager _shadowTigerManager;
+
+
+    private StompAttack _stompAttack;
 
     private Coroutine callShootCO;
     public bool isShootingToPlayer;
@@ -26,7 +32,13 @@ public class EnemyLoop : MonoBehaviour
     private Coroutine spawnMinionCO = null;
 
     private bool isSpawningShields = false;
-    private bool isChargeAttackRun;
+    private bool isChargeAttackRun = false;
+    private bool withFireTrailBehind = false;
+    private bool isStompAttack = false;
+    private bool is360RotationAttack = false;
+    private bool isSpawningTornado = false;
+    private bool isRunningTowardsPlayer = false;
+    private bool isPlantingATrap = false;
 
     [Serializable]
     public class EnemyMovement
@@ -36,10 +48,34 @@ public class EnemyLoop : MonoBehaviour
         [Space(10)]
         public bool isChargeAttackRun;
 
+        public bool withFireTrailBehind = false;
+
+        [Space(10)]
+        public bool isStompAttack;
+
+        public int stompAmount;
+        public float stompSize;
+
+        [Space(10)]
+        public bool is360RotationAttack;
+
+        public bool isSpawningTornado;
+        public int numberOfTornadoes;
+        public float delayBetweenTornadoes;
+
         [Space(10)]
         public float timeForThisAction;
 
         public bool isEndConditionForReachingTarget;
+
+        [Space(10)]
+        public bool isRunningTowardsPlayer;
+
+        [Range(12, 15)]
+        public float stopDistanceWithPlayer;
+
+        public int amountOfPawnAttacks;
+        public float timeDelayBetweenPawnAttacks;
 
         [Space(10)]
         public bool isMoving;
@@ -73,6 +109,16 @@ public class EnemyLoop : MonoBehaviour
 
         [Space(10)]
         public bool isSpawningShield;
+
+        [Space(10)]
+        public bool isPlantingATrap=false;
+        public int trapAmount;
+
+        [Space(10)]
+        public bool isShadowAttacking;
+        public int shadowTigerAmount;
+        public int pawnAttackAmount;
+
     }
 
     [SerializeField] private int currentIndex;
@@ -86,6 +132,13 @@ public class EnemyLoop : MonoBehaviour
     [SerializeField] private Transform _enemySpriteTransform;
 
     [SerializeField] private Animator _enemyAnimator;
+
+    [SerializeField] private AnimationClip _stompAttackAnimation;
+    private Coroutine _stompAttackInCyclesCO = null;
+    private int _currentAmountInStompAttack = 0;
+    private Vector2 _lastSpawnedFireTrailPos = Vector2.zero;
+
+    [SerializeField] GorillaTrapPlanter _gorillaTrapPlanter;
 
     private void Start()
     {
@@ -101,6 +154,8 @@ public class EnemyLoop : MonoBehaviour
 
         if (enemyHealth <= 25)
         {
+            _enemyAnimator.SetLayerWeight(0, 0);
+            _enemyAnimator.SetLayerWeight(1, 1);
             return enemyMovementsForTheThirdPhase;
         }
         else if ((enemyHealth <= 50) && (25 < enemyHealth))
@@ -132,17 +187,27 @@ public class EnemyLoop : MonoBehaviour
 
         isMoving = currentEnemyMovement.isMoving;
 
+        isRunningTowardsPlayer = currentEnemyMovement.isRunningTowardsPlayer;
+
+        isStompAttack = currentEnemyMovement.isStompAttack;
+
+        if (isStompAttack)
+        {
+            _stompAttackInCyclesCO = StartCoroutine(StompAttackInCycles(currentEnemyMovement.stompSize, currentEnemyMovement.stompAmount));
+        }
+
         isChargeAttackRun = currentEnemyMovement.isChargeAttackRun;
+        withFireTrailBehind = currentEnemyMovement.withFireTrailBehind;
 
         if (!isChargeAttackRun)
         {
             if (isMoving)
             {
-                _enemyAnimator.SetBool("isWalking", true);
+                _enemyAnimator.SetBool("isRunning", true);
             }
             else
             {
-                _enemyAnimator.SetBool("isWalking", false);
+                _enemyAnimator.SetBool("isRunning", false);
                 _enemyAnimator.SetBool("chargeAttackRun", false);
             }
         }
@@ -155,11 +220,12 @@ public class EnemyLoop : MonoBehaviour
             }
             else
             {
-                _enemyAnimator.SetBool("isWalking", false);
-
+                _enemyAnimator.SetBool("isRunning", false);
                 _enemyAnimator.SetBool("chargeAttackRun", false);
             }
         }
+
+
 
         isShootingToPlayer = currentEnemyMovement.isShootingToPlayer;
 
@@ -170,6 +236,29 @@ public class EnemyLoop : MonoBehaviour
         isSpawningMinions = currentEnemyMovement.isSpawningMinions;
 
         isSpawningShields = currentEnemyMovement.isSpawningShield;
+
+        is360RotationAttack = currentEnemyMovement.is360RotationAttack;
+
+        isPlantingATrap = currentEnemyMovement.isPlantingATrap;
+
+        if (currentEnemyMovement.isShadowAttacking)
+        {
+            _shadowTigerManager.SpawnShadowTigers(currentEnemyMovement.shadowTigerAmount, currentEnemyMovement.pawnAttackAmount);
+            yield return new WaitUntil(() => _shadowTigerManager.GetIsSpawnShadowTigerISFinished());
+
+        }
+
+        if (isRunningTowardsPlayer)
+        {
+            GetComponentInChildren<PawnAttack>().StartPawnAttack(currentEnemyMovement.amountOfPawnAttacks, currentEnemyMovement.timeDelayBetweenPawnAttacks, currentEnemyMovement.stopDistanceWithPlayer, currentEnemyMovement.withFireTrailBehind);
+            yield return new WaitUntil(() => GetComponentInChildren<PawnAttack>().GetPawnAttackCycleFinished());
+            GetComponentInChildren<PawnAttack>().ResetIsPawnAttackFinished();
+        }
+
+        if (is360RotationAttack)
+        {
+            GetComponent<EnemyWeapon>().Start360Attack(currentEnemyMovement.isSpawningTornado, currentEnemyMovement.numberOfTornadoes, currentEnemyMovement.delayBetweenTornadoes);
+        }
 
         if (isSpawningShields)
         {
@@ -186,7 +275,18 @@ public class EnemyLoop : MonoBehaviour
             GetComponent<EnemyDashingThroughScreen>().DashThroughScreen();
         }
 
-        if (!currentEnemyMovement.isEndConditionForReachingTarget)
+        if (isPlantingATrap)
+        {
+            _gorillaTrapPlanter.StartPlantingATrap(currentEnemyMovement.trapAmount);
+            yield return new WaitUntil(() => _gorillaTrapPlanter.IsTheCycleFinised() == true);
+            _gorillaTrapPlanter.ResetTrapCycleFinished();
+        }
+
+        if (isStompAttack)
+        {
+            yield return new WaitUntil(() => _stompAttackInCyclesCO == null);
+        }
+        else if (!currentEnemyMovement.isEndConditionForReachingTarget)
         {
             yield return new WaitForSeconds(currentEnemyMovement.timeForThisAction);
         }
@@ -197,11 +297,33 @@ public class EnemyLoop : MonoBehaviour
         else
         {
             yield return new WaitUntil(() => Vector2.Distance(transform.position, targetPosition) < .5f);
+            isMoving = false;
         }
 
         currentIndex += 1;
 
+        if (is360RotationAttack)
+        {
+            GetComponent<EnemyWeapon>().Stop360Attack();
+        }
+
         StartCoroutine(DoEnemyMovementCycles());
+    }
+
+    private IEnumerator StompAttackInCycles(float stompMaxScale, int loopAmount)
+    {
+        if (_currentAmountInStompAttack >= loopAmount)
+        {
+            _stompAttackInCyclesCO = null;
+            yield break;
+        }
+
+        Debug.Log($"StompAttackInCycles with {_currentAmountInStompAttack} and {loopAmount} and {_currentAmountInStompAttack <= loopAmount} and {_stompAttackAnimation.length}");
+        GetComponent<EnemyWeapon>().StompAttack(stompMaxScale);
+        yield return new WaitForSeconds(_stompAttackAnimation.length + .5f);
+
+        _currentAmountInStompAttack++;
+        _stompAttackInCyclesCO = StartCoroutine(StompAttackInCycles(stompMaxScale, loopAmount));
     }
 
     private IEnumerator ShootPlayerWithDelay(float delay)
@@ -218,12 +340,9 @@ public class EnemyLoop : MonoBehaviour
         }
     }
 
-    private void LookAtTargetVector3()
+    public void LookAtTargetVector3(Vector2 targetVector2)
     {
-        //transform.up = (Vector2)targetPosition - new Vector2(transform.position.x, transform.position.y);
-        Vector2 targetTransform = targetPosition;
-
-        if (targetTransform.x - transform.position.x > 0)
+        if (targetVector2.x - transform.position.x > 0)
         {
             _enemySpriteTransform.transform.localScale = Vector3.one;
         }
@@ -239,7 +358,23 @@ public class EnemyLoop : MonoBehaviour
         {
             float step = _currentPhaseEnemyMovement[currentIndex].movementSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, step);
-            LookAtTargetVector3();
+
+            Debug.Log($"Vector2.Distance(transform.position, targetPosition) {Vector2.Distance(transform.position, targetPosition)}");
+            //Debug.Log($"Distance To Target Position {Vector2.Distance(this.transform.position, targetPosition)}");
+            //if (Vector2.Distance(this.transform.position, targetPosition) < 2f)
+            //{
+            //    isMoving = false;
+            //}
+
+            LookAtTargetVector3(targetPosition);
+            if (withFireTrailBehind)
+            {
+                if (Vector2.Distance(_lastSpawnedFireTrailPos, transform.position) >= 3)
+                {
+                    _lastSpawnedFireTrailPos = transform.position;
+                    FindObjectOfType<FireTrailManager>(true).SpawnAvailableFireTrailOnThePositionOf(transform.position);
+                }
+            }
         }
 
         if (isShootingToPlayer)

@@ -18,6 +18,8 @@ public class EnemyWeapon : MonoBehaviour
     [SerializeField] private int enemyShieldAmount = 3;
 
     private Coroutine spawnMinionCO;
+    [SerializeField] private ParticleSystem _swordWhirlwindYellow;
+    [SerializeField] private Transform _tornadoReference;
 
     public void ShootPlayer()
     {
@@ -73,7 +75,6 @@ public class EnemyWeapon : MonoBehaviour
         Debug.Log("StompAttack");
         GetComponentInChildren<StompAttack>().SetStompParameter(stompMaxScale);
         GetComponentInChildren<Animator>().SetTrigger("isJumping");
-
     }
 
     public void SpawnEnemyShield()
@@ -128,6 +129,35 @@ public class EnemyWeapon : MonoBehaviour
         }
     }
 
+    public void Start360Attack(bool isSpawningTornadoes, int numberOfTornadoes = 1, float delayBetweenTornadoes = 2)
+    {
+        Debug.Log("Do360Attack");
+        GetComponentInChildren<Animator>().SetBool("360Attack", true);
+        _swordWhirlwindYellow.gameObject.SetActive(true);
+        if (isSpawningTornadoes)
+        {
+            StartCoroutine(SpawnTornadoesWithDelayCO(numberOfTornadoes, delayBetweenTornadoes));
+        }
+    }
+
+    private IEnumerator SpawnTornadoesWithDelayCO(int numberOfTornadoes, float delayBetweenTornadoes)
+    {
+        for (int i = 0; i < numberOfTornadoes; i++)
+        {
+        
+            Transform newTornado = Instantiate(_tornadoReference, this.transform.position, Quaternion.identity, null);
+            newTornado.GetComponent<Tornado>().StartMovingTowards(_player.transform);
+            yield return new WaitForSeconds(delayBetweenTornadoes);
+        }
+    }
+
+    public void Stop360Attack()
+    {
+        Debug.Log("Stop360Attack");
+        GetComponentInChildren<Animator>().SetBool("360Attack", false);
+        _swordWhirlwindYellow.gameObject.SetActive(false);
+    }
+
     public void SpawnMinion(float timeBetweenMinionSpawns)
     {
         spawnMinionCO = StartCoroutine(SpawnMinionWithDelay(timeBetweenMinionSpawns));
@@ -167,10 +197,10 @@ public class EnemyWeapon : MonoBehaviour
         {
             SpawnEnemyShield();
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            StompAttack(.3f);
-        }
+        //if (Input.GetKeyDown(KeyCode.C))
+        //{
+        //    StompAttack(.3f);
+        //}
 
 #endif
     }

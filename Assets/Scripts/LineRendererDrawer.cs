@@ -29,7 +29,7 @@ public class LineRendererDrawer : MonoBehaviour
         if (!isLineRendererDrawn)
         {
             isLineRendererDrawn = true;
-            multiplierValue = 15f;
+            multiplierValue = 25f;
         }
 
         multiplierValue += Time.deltaTime * lineRendererIncreaseSpeed;
@@ -109,6 +109,11 @@ public class LineRendererDrawer : MonoBehaviour
             ToggleLockedOnTarget();
         }
 #endif
+        if (Input.GetMouseButtonDown(1))
+        {
+            lineRenderer.positionCount = 0;
+        }
+
         if (Input.GetMouseButton(1))
         {
             if (!lockedOnTarget)
@@ -138,7 +143,7 @@ public class LineRendererDrawer : MonoBehaviour
 
             float distanceToEnemy = Vector2.Distance(FindObjectOfType<Enemy>(true).transform.position, player.transform.position);
 
-            float throwPercentage = lengthOfLineRenderer / distanceToEnemy;
+            float throwPercentage = Mathf.Clamp(lengthOfLineRenderer / distanceToEnemy, .5f, 1f);
 
             if (!lockedOnTarget)
             {

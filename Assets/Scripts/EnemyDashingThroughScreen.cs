@@ -67,9 +67,6 @@ public class EnemyDashingThroughScreen : MonoBehaviour
 
     private void LookAtTargetVector3()
     {
-        //transform.up = (Vector2)targetPosition - new Vector2(transform.position.x, transform.position.y);
-
-
         Vector2 targetTransform = targetPosition;
 
         if (targetTransform.x - transform.position.x > 0)
