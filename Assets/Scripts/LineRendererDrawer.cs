@@ -22,6 +22,20 @@ public class LineRendererDrawer : MonoBehaviour
     private bool lockedOnTarget;
     public float offsetDistanceWhenLockedOnTarget = 20;
 
+    [SerializeField] private Transform _debuggerPoint1;
+    [SerializeField] private Transform _debuggerPoint2;
+    bool _disableAttacks = false;
+
+    public void DisableAttacks()
+    {
+        _disableAttacks = true;
+    }
+
+    public void EnableAttacks()
+    {
+        _disableAttacks = false;
+    }
+
     private void DrawALineTowardsTarget()
     {
         lineRenderer.material.color = Color.white;
@@ -36,11 +50,11 @@ public class LineRendererDrawer : MonoBehaviour
 
         Vector2 directionVector = ((mousePos - (Vector2)player.transform.position).normalized);
         Vector2 offsetVector = directionVector * multiplierValue;
-        Vector2 startPos = (Vector2)player.transform.position + (directionVector * 5);
+        Vector2 startPos = (Vector2)player.transform.position + (directionVector * 8);
 
         Vector2 tipOfTheLineRender = (startPos + offsetVector);
 
-        hitInfo = Physics2D.Linecast(startPos, tipOfTheLineRender);
+        hitInfo = Physics2D.Linecast(startPos, tipOfTheLineRender, LayerMask.GetMask("Enemy"));
 
         if (hitInfo)
         {
@@ -65,6 +79,13 @@ public class LineRendererDrawer : MonoBehaviour
                 lineRenderer.material.color = Color.white;
             }
         }
+
+#if UNITY_EDITOR
+        _debuggerPoint1.transform.position = startPos;
+        _debuggerPoint2.transform.position = tipOfTheLineRender;
+        //Debug.Log()
+
+#endif
 
         Vector3[] positions = new Vector3[] { startPos, tipOfTheLineRender };
         lineRenderer.positionCount = 2;
@@ -96,11 +117,17 @@ public class LineRendererDrawer : MonoBehaviour
 
     private void Update()
     {
+
         if (lockedOnTarget)
         {
             Vector3[] positions = new Vector3[] { player.transform.position, FindObjectOfType<Enemy>().transform.position };
             lineRenderer.positionCount = 2;
             lineRenderer.SetPositions(positions);
+        }
+
+        if (_disableAttacks)
+        {
+            return;
         }
 
 #if UNITY_EDITOR
@@ -133,7 +160,6 @@ public class LineRendererDrawer : MonoBehaviour
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 startPos = (Vector2)player.transform.position + ((mousePos - (Vector2)player.transform.position).normalized * 10);
 
-            //Banana newBanana = Instantiate(banana, startPos, Quaternion.identity, null);
             Banana newBanana = player.GetComponent<Weapon>().GetAvailableBananaFromTheBagAndReduceAmountInBag();
             if (newBanana == null)
             {

@@ -23,7 +23,12 @@ public class DamageZone : MonoBehaviour
         }
     }
 
-    public void CallDisableGameObjectWithDelay()
+    public void DisableGameObjectFromBanana()
+    {
+        GetComponent<Animator>().SetTrigger("TriggerGorillaTrap");
+    }
+
+    public void CallDisableGameObjectWithDelay(bool calledFromBanana)
     {
         StartCoroutine(DisableGameObjectWithDelay(7));
     }

@@ -32,6 +32,17 @@ public class Player : MonoBehaviour
         _lookAtTarget = transform;
     }
 
+    public void RegenerateHealthAfterBananaEaten()
+    {
+        _playerHealth += 10;
+        if (_playerHealth >= 100)
+        {
+            _playerHealth = 100;
+            Debug.Log("Player already eliminated");
+        }
+        _playerHealthLeft.fillAmount = (float)_playerHealth / 100;
+    }
+
     public void DoPlayerGotHit(Transform gotHitFrom)
     {
         _playerAnimator.SetTrigger("gotDamage");
@@ -132,6 +143,8 @@ public class Player : MonoBehaviour
 
     public void DisableControls()
     {
+        _rigidbody.velocity = Vector2.zero;
+        _playerAnimator.SetBool("isWalking", false);
         _enableControls = false;
     }
 

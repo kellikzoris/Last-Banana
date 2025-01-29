@@ -106,7 +106,7 @@ public class ShadowTiger : MonoBehaviour
         {
             float step = movementSpeed * Time.deltaTime;
             _enemy.transform.position = Vector2.MoveTowards(_enemy.transform.position, _player.transform.position, step);
-            Debug.Log($"Distance Between Enemy And Player {Vector2.Distance(_enemy.transform.position, _player.transform.position)}");
+            //Debug.Log($"Distance Between Enemy And Player {Vector2.Distance(_enemy.transform.position, _player.transform.position)}");
             if (Vector2.Distance(_enemy.transform.position, _player.transform.position) < _stopDistanceWithPlayer)
             {
                 _isRunningTowardsPlayer = false;

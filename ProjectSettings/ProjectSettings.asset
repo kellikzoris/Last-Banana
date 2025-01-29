@@ -12,9 +12,9 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Minda3D
   productName: Last Banana
-  defaultCursor: {fileID: 2800000, guid: a3ed1a2f786bc3147882af9ae1ea62b9, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 31b8d7f34db4a124c979817a55df5b93, type: 3}
   cursorHotspot: {x: 185, y: 185}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1

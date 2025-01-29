@@ -51,12 +51,12 @@ public class GorillaTrapPlanter : MonoBehaviour
         if (GetComponentInChildren<Animator>().transform.localScale.x < 0)
         {
             Transform _gorillaTrapPlanted = Instantiate(_gorillaTrap, this.transform.position + new Vector3(-9, 0, 0), Quaternion.identity, null);
-            _gorillaTrapPlanted.GetComponent<DamageZone>().CallDisableGameObjectWithDelay();
+            _gorillaTrapPlanted.GetComponent<DamageZone>().CallDisableGameObjectWithDelay(false);
         }
         else
         {
             Transform _gorillaTrapPlanted = Instantiate(_gorillaTrap, this.transform.position + new Vector3(9, 0, 0), Quaternion.identity, null);
-            _gorillaTrapPlanted.GetComponent<DamageZone>().CallDisableGameObjectWithDelay();
+            _gorillaTrapPlanted.GetComponent<DamageZone>().CallDisableGameObjectWithDelay(false);
         }
         GetComponentInChildren<Animator>().SetBool("isEating", false);
     }

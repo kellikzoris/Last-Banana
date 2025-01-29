@@ -15,7 +15,7 @@ public class Banana : MonoBehaviour
     public float _throwAngle;
 
     public bool _isTravelingClockwise;
-    public bool _isBananaOnGround = true;
+    public bool _isBananaOnGround;
     public float _lifeTimeOFTheBanana = 1;
 
     public enum BananaType
@@ -37,7 +37,7 @@ public class Banana : MonoBehaviour
         return _isBananaOnGround;
     }
 
-    private void Start()
+    public void SetAsGroundBanana()
     {
         _isBananaOnGround = true;
     }
@@ -59,6 +59,7 @@ public class Banana : MonoBehaviour
 
     public void ThrowBananaDirectional(Vector2 startThrowPosition, Transform targetTransform = null, float throwPower = 1)
     {
+        GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Stomp");
         FindObjectOfType<Player>().GetComponentInChildren<Animator>().SetTrigger("isAttacking");
         _isBananaOnGround = false;
 
@@ -145,6 +146,12 @@ public class Banana : MonoBehaviour
             if (collision.transform.CompareTag("ShadowTiger"))
             {
                 collision.transform.GetComponent<ShadowTigerEnemy>().DoEnemyGotHit();
+            }
+
+            if (collision.transform.CompareTag("GorillaTrap"))
+            {
+                Debug.Log("BananaHasTouchedToGorillaTrap");
+                collision.transform.GetComponent<DamageZone>().DisableGameObjectFromBanana();
             }
 
             this.gameObject.SetActive(false);

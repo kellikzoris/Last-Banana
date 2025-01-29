@@ -519,7 +519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &28377129
 Rigidbody2D:
   serializedVersion: 4
@@ -2035,13 +2035,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 240451305}
-  banana: {fileID: 485737611}
+  banana: {fileID: 0}
   player: {fileID: 795327721}
   weapon: {fileID: 795327724}
   lineRendererMaterial: {fileID: 2100000, guid: 01beeb7e470285e489d9948cecfeda9b, type: 2}
   multiplierValue: -30
   lineRendererIncreaseSpeed: 50
   offsetDistanceWhenLockedOnTarget: 20
+  _debuggerPoint1: {fileID: 1925355074}
+  _debuggerPoint2: {fileID: 2123547772}
 --- !u!1 &261998983
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,176 +3604,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &485737608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 485737610}
-  - component: {fileID: 485737609}
-  - component: {fileID: 485737611}
-  - component: {fileID: 485737612}
-  - component: {fileID: 485737613}
-  m_Layer: 0
-  m_Name: yellowBanana
-  m_TagString: banana
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &485737609
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485737608}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.82, y: 2.01}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &485737610
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485737608}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.62, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &485737611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485737608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _radius: 1
-  player: {fileID: 795327721}
-  _throwSpeed: 50
-  _rotateAroundSpeed: 1
-  _throwAngle: 0
-  _isTravelingClockwise: 0
-  _isBananaOnGround: 1
-  _lifeTimeOFTheBanana: 1
-  _bananaType: 0
---- !u!58 &485737612
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485737608}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.005
---- !u!50 &485737613
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485737608}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 511
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &493822624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3933,6 +3765,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &494799504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494799505}
+  - component: {fileID: 494799507}
+  - component: {fileID: 494799506}
+  m_Layer: 5
+  m_Name: BananaImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &494799505
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494799504}
+  m_LocalRotation: {x: 0, y: 0, z: 0.13052616, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1268213839}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: -30, y: -50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &494799506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494799504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c6ba291df71f61d43bf508ad88283390, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &494799507
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494799504}
+  m_CullTransparentMesh: 1
 --- !u!1 &499443674
 GameObject:
   m_ObjectHideFlags: 0
@@ -4713,6 +4620,176 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &590572788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590572793}
+  - component: {fileID: 590572792}
+  - component: {fileID: 590572791}
+  - component: {fileID: 590572790}
+  - component: {fileID: 590572789}
+  m_Layer: 11
+  m_Name: yellowBanana (7)
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &590572789
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590572788}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &590572790
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590572788}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &590572791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590572788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &590572792
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590572788}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &590572793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590572788}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611865305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5094,6 +5171,8 @@ MonoBehaviour:
   enemyShieldAmount: 3
   _swordWhirlwindYellow: {fileID: 752494869}
   _tornadoReference: {fileID: 1142120518}
+  _tornadoReferenceYellow: {fileID: 0}
+  _tornadoReferenceRed: {fileID: 0}
 --- !u!114 &623075213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5128,8 +5207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c20d22511e0ef4da5c417eea19674c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerTransform: {fileID: 0}
   speed: 0
   enemyWeapon: {fileID: 623075211}
+  _shadowTigerManager: {fileID: 0}
   isShootingToPlayer: 0
   currentIndex: 0
   _currentPhaseEnemyMovement: []
@@ -5144,8 +5225,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 30
     targetPosition: {x: 40, y: 16}
@@ -5157,6 +5243,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_2
     isChargeAttackRun: 1
     withFireTrailBehind: 0
@@ -5167,8 +5260,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 30
     targetPosition: {x: 30, y: -22}
@@ -5180,6 +5278,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5190,8 +5295,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5203,6 +5313,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_3
     isChargeAttackRun: 1
     withFireTrailBehind: 0
@@ -5213,8 +5330,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 30
     targetPosition: {x: -40, y: -22}
@@ -5226,6 +5348,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_4
     isChargeAttackRun: 1
     withFireTrailBehind: 0
@@ -5236,8 +5365,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 30
     targetPosition: {x: -30, y: 16}
@@ -5249,6 +5383,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5259,8 +5400,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5272,6 +5418,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_5
     isChargeAttackRun: 1
     withFireTrailBehind: 0
@@ -5282,8 +5435,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 30
     targetPosition: {x: -25, y: -2}
@@ -5295,6 +5453,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_1
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5305,8 +5470,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 1
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5318,6 +5488,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: StompAttack_3_Cycle
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5328,8 +5505,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5341,6 +5523,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5351,8 +5540,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5364,6 +5558,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: 360RotatingAttackFor_5_Seconds
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5374,8 +5575,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 5
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5387,6 +5593,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   enemyMovementsForTheSecondPhase:
   - name: ChargeAttackRun_1_WithFireTrail
     isChargeAttackRun: 1
@@ -5398,8 +5611,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 40
     targetPosition: {x: 40, y: 16}
@@ -5411,6 +5629,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_2_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
@@ -5421,8 +5646,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 40
     targetPosition: {x: 30, y: -22}
@@ -5434,6 +5664,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5444,8 +5681,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5457,6 +5699,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_3_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
@@ -5467,8 +5716,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 40
     targetPosition: {x: -40, y: -22}
@@ -5480,6 +5734,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_4_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
@@ -5490,8 +5751,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 40
     targetPosition: {x: -30, y: 16}
@@ -5503,6 +5769,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5513,8 +5786,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5526,6 +5804,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_5_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
@@ -5536,8 +5821,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 40
     targetPosition: {x: -25, y: -2}
@@ -5549,6 +5839,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_1
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5559,8 +5856,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 1
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5572,6 +5874,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: StompAttack_7_Cycle
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5582,8 +5891,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5595,6 +5909,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5605,8 +5926,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5618,6 +5944,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: 360RotatingAttackFor_5_Seconds_WithTornadoSpawning
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5628,8 +5961,13 @@ MonoBehaviour:
     isSpawningTornado: 1
     numberOfTornadoes: 4
     delayBetweenTornadoes: 1
+    tornadoType: 0
     timeForThisAction: 5
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5641,6 +5979,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   enemyMovementsForTheThirdPhase:
   - name: ChargeAttackRun_1_WithFireTrail
     isChargeAttackRun: 1
@@ -5652,8 +5997,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 50
     targetPosition: {x: 40, y: 16}
@@ -5665,6 +6015,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_2_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
@@ -5675,8 +6032,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 50
     targetPosition: {x: 30, y: -22}
@@ -5688,6 +6050,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5698,8 +6067,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5711,6 +6085,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_3_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
@@ -5721,8 +6102,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 50
     targetPosition: {x: -40, y: -22}
@@ -5734,6 +6120,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_4_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
@@ -5744,8 +6137,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 50
     targetPosition: {x: -30, y: 16}
@@ -5757,6 +6155,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5767,8 +6172,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5780,6 +6190,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: ChargeAttackRun_5_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
@@ -5790,8 +6207,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 50
     targetPosition: {x: -25, y: -2}
@@ -5803,6 +6225,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_1
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5813,8 +6242,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 1
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5826,6 +6260,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: StompAttack_9_Cycle
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5836,8 +6277,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 0
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5849,6 +6295,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: WaitForSeconds_2
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5859,8 +6312,13 @@ MonoBehaviour:
     isSpawningTornado: 0
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
+    tornadoType: 0
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5872,6 +6330,13 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   - name: 360RotatingAttackFor_5_Seconds_WithTornadoSpawning
     isChargeAttackRun: 0
     withFireTrailBehind: 0
@@ -5882,8 +6347,13 @@ MonoBehaviour:
     isSpawningTornado: 1
     numberOfTornadoes: 9
     delayBetweenTornadoes: 1
+    tornadoType: 0
     timeForThisAction: 10
     isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
     isMoving: 0
     movementSpeed: 0
     targetPosition: {x: 0, y: 0}
@@ -5895,9 +6365,17 @@ MonoBehaviour:
     isSpawningMinions: 0
     timeBetweenSpawningMinions: 0
     isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
   _enemySpriteTransform: {fileID: 1954491281}
   _enemyAnimator: {fileID: 1954491283}
   _stompAttackAnimation: {fileID: 7400000, guid: 6de6ce66158790347bc38702c13f00de, type: 2}
+  _gorillaTrapPlanter: {fileID: 0}
 --- !u!1 &628200428
 GameObject:
   m_ObjectHideFlags: 0
@@ -11010,7 +11488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &664772641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11209,7 +11687,6 @@ GameObject:
   - component: {fileID: 737300808}
   - component: {fileID: 737300810}
   - component: {fileID: 737300809}
-  - component: {fileID: 737300811}
   m_Layer: 5
   m_Name: Yellow Banana Field
   m_TagString: Untagged
@@ -11276,50 +11753,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737300807}
   m_CullTransparentMesh: 1
---- !u!114 &737300811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737300807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 737300809}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &739208685
 GameObject:
   m_ObjectHideFlags: 0
@@ -16662,8 +17095,10 @@ MonoBehaviour:
   _playerHealthLeft: {fileID: 874732618}
   _enableControls: 1
   _dashMultiplier: 5
+  _dashDuration: 0
   _playerSpriteTransform: {fileID: 1735171099}
   _playerAnimator: {fileID: 1735171100}
+  _dashTrail: {fileID: 0}
 --- !u!4 &795327723
 Transform:
   m_ObjectHideFlags: 0
@@ -16693,8 +17128,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953c28b9a0d0bf54887b0a519037f508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bananaBagCapacity: 10
   _yellowBananasInBag:
-  - {fileID: 485737611}
+  - {fileID: 1588044260}
+  - {fileID: 1355415982}
+  - {fileID: 590572791}
+  - {fileID: 850867922}
+  - {fileID: 1991186845}
+  - {fileID: 1913660237}
+  - {fileID: 1381530039}
+  - {fileID: 2088179072}
   _greenBananasInBag:
   - {fileID: 28377131}
   _redBananasInBag:
@@ -16705,7 +17148,7 @@ MonoBehaviour:
   _yellowBananaAmountLeft: {fileID: 1290223661}
   _greenBananaAmountLeft: {fileID: 1024706585}
   _redBananaAmountLeft: {fileID: 1647611865}
-  _yellowBananaButton: {fileID: 737300811}
+  _yellowBananaButton: {fileID: 0}
   _greenBananaButton: {fileID: 1144749755}
   _redBananaButton: {fileID: 664772642}
   _selectedBananaType: 0
@@ -17143,6 +17586,7 @@ RectTransform:
   - {fileID: 1865194926}
   - {fileID: 795284586}
   - {fileID: 737300808}
+  - {fileID: 1268213839}
   - {fileID: 1144749752}
   - {fileID: 664772641}
   - {fileID: 9833214}
@@ -17322,6 +17766,176 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &850867919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850867924}
+  - component: {fileID: 850867923}
+  - component: {fileID: 850867922}
+  - component: {fileID: 850867921}
+  - component: {fileID: 850867920}
+  m_Layer: 11
+  m_Name: yellowBanana (5)
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &850867920
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850867919}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &850867921
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850867919}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &850867922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850867919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &850867923
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850867919}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &850867924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850867919}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &874732616
 GameObject:
   m_ObjectHideFlags: 0
@@ -19889,7 +20503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1144749752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21178,7 +21792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1257769989
 Rigidbody2D:
   serializedVersion: 4
@@ -21497,6 +22111,169 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1268213838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268213839}
+  - component: {fileID: 1268213843}
+  - component: {fileID: 1268213842}
+  - component: {fileID: 1268213841}
+  - component: {fileID: 1268213840}
+  - component: {fileID: 1268213844}
+  m_Layer: 5
+  m_Name: EatBanana
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1268213839
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268213838}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 494799505}
+  - {fileID: 1479203118}
+  m_Father: {fileID: 824613428}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -230, y: 20}
+  m_SizeDelta: {x: 100, y: 40}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1268213840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268213838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -4, y: -4}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1268213841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268213838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1268213842}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 795327724}
+        m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
+        m_MethodName: EatABananaFromTheBag
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1268213841}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1268213842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268213838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.23889089, g: 0.50980395, b: 0.08235293, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1268213843
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268213838}
+  m_CullTransparentMesh: 1
+--- !u!114 &1268213844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268213838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f17a02ec60c0a42a7cf63087aa03b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1269019150
 GameObject:
   m_ObjectHideFlags: 0
@@ -22170,6 +22947,176 @@ Transform:
   - {fileID: 437046028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1355415979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355415984}
+  - component: {fileID: 1355415983}
+  - component: {fileID: 1355415982}
+  - component: {fileID: 1355415981}
+  - component: {fileID: 1355415980}
+  m_Layer: 11
+  m_Name: yellowBanana (1)
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &1355415980
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355415979}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1355415981
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355415979}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &1355415982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355415979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &1355415983
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355415979}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1355415984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355415979}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356541790
 GameObject:
   m_ObjectHideFlags: 0
@@ -22422,6 +23369,176 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1381530036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381530041}
+  - component: {fileID: 1381530040}
+  - component: {fileID: 1381530039}
+  - component: {fileID: 1381530038}
+  - component: {fileID: 1381530037}
+  m_Layer: 11
+  m_Name: yellowBanana (2)
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &1381530037
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381530036}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1381530038
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381530036}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &1381530039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381530036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &1381530040
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381530036}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1381530041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381530036}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398830378
 GameObject:
   m_ObjectHideFlags: 0
@@ -22932,6 +24049,176 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1437459892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437459897}
+  - component: {fileID: 1437459896}
+  - component: {fileID: 1437459895}
+  - component: {fileID: 1437459894}
+  - component: {fileID: 1437459893}
+  m_Layer: 11
+  m_Name: yellowBanana[PrefabDon'tReference]
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &1437459893
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437459892}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1437459894
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437459892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &1437459895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437459892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &1437459896
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437459892}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1437459897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437459892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1443208520
 GameObject:
   m_ObjectHideFlags: 0
@@ -23352,6 +24639,140 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1479203117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1479203118}
+  - component: {fileID: 1479203120}
+  - component: {fileID: 1479203119}
+  m_Layer: 5
+  m_Name: AmountLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1479203118
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479203117}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1268213839}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 2.5}
+  m_SizeDelta: {x: 0, y: -5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1479203119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479203117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Eat (E)
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 1024
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1479203120
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479203117}
+  m_CullTransparentMesh: 1
 --- !u!1 &1493596274
 GameObject:
   m_ObjectHideFlags: 0
@@ -24360,6 +25781,176 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1588044257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588044262}
+  - component: {fileID: 1588044261}
+  - component: {fileID: 1588044260}
+  - component: {fileID: 1588044259}
+  - component: {fileID: 1588044258}
+  m_Layer: 11
+  m_Name: yellowBanana (4)
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &1588044258
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588044257}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1588044259
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588044257}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &1588044260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588044257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &1588044261
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588044257}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1588044262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588044257}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1588425452
 GameObject:
   m_ObjectHideFlags: 0
@@ -26641,17 +28232,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863805648}
-  m_LocalRotation: {x: 0, y: 0, z: -0.6091076, w: 0.7930876}
+  m_LocalRotation: {x: 0, y: 0, z: 0.13052616, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 737300808}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -75.05}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 12.5}
-  m_SizeDelta: {x: -20, y: -45}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: -30, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1863805650
 MonoBehaviour:
@@ -26673,7 +28264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c5ac5c637600840960a54acb51bbcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6ba291df71f61d43bf508ad88283390, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -27434,6 +29025,176 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &1913660234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1913660239}
+  - component: {fileID: 1913660238}
+  - component: {fileID: 1913660237}
+  - component: {fileID: 1913660236}
+  - component: {fileID: 1913660235}
+  m_Layer: 11
+  m_Name: yellowBanana (3)
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &1913660235
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913660234}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1913660236
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913660234}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &1913660237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913660234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &1913660238
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913660234}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1913660239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913660234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1913698579
 GameObject:
   m_ObjectHideFlags: 0
@@ -32427,6 +34188,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1925355072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925355074}
+  - component: {fileID: 1925355073}
+  m_Layer: 0
+  m_Name: LineRendererHelperPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &1925355073
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925355072}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1925355074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925355072}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.5, y: 23.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1936720140
 GameObject:
   m_ObjectHideFlags: 0
@@ -32800,6 +34645,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stompAttack: {fileID: 2003818039}
+  _pawnAttack: {fileID: 0}
+  _gorillaTrapPlanter: {fileID: 0}
+  _shadowTiger: {fileID: 0}
+  _isThisShadowTiger: 0
 --- !u!1 &1954672073
 GameObject:
   m_ObjectHideFlags: 0
@@ -33466,6 +35315,176 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1991186842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991186847}
+  - component: {fileID: 1991186846}
+  - component: {fileID: 1991186845}
+  - component: {fileID: 1991186844}
+  - component: {fileID: 1991186843}
+  m_Layer: 11
+  m_Name: yellowBanana (6)
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &1991186843
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991186842}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1991186844
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991186842}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &1991186845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991186842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &1991186846
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991186842}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1991186847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991186842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998713849
 GameObject:
   m_ObjectHideFlags: 0
@@ -39102,7 +41121,7 @@ MonoBehaviour:
   - {fileID: 1277447710}
   - {fileID: 896995050}
   _timeBetweenBananaSpawns: 2
-  banana: {fileID: 485737611}
+  banana: {fileID: 1437459895}
   _stopInstantiating: 0
 --- !u!4 &2044495346
 Transform:
@@ -39622,6 +41641,176 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3, y: 3.3}
   m_EdgeRadius: 0
+--- !u!1 &2088179069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088179074}
+  - component: {fileID: 2088179073}
+  - component: {fileID: 2088179072}
+  - component: {fileID: 2088179071}
+  - component: {fileID: 2088179070}
+  m_Layer: 11
+  m_Name: yellowBanana (8)
+  m_TagString: banana
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &2088179070
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088179069}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1535
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &2088179071
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088179069}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.005
+--- !u!114 &2088179072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088179069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c842a28ec2c61f644b451bb2bb4f077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 1
+  player: {fileID: 0}
+  _throwSpeed: 80
+  _rotateAroundSpeed: 1
+  _throwAngle: 0
+  _isTravelingClockwise: 0
+  _isBananaOnGround: 0
+  _lifeTimeOFTheBanana: 3
+  _bananaType: 0
+--- !u!212 &2088179073
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088179069}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cadf8b6a7982c6b4a9ffa2d2f6a37c4f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.82, y: 2.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2088179074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088179069}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.62, y: 44.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2093682563
 GameObject:
   m_ObjectHideFlags: 0
@@ -40335,6 +42524,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2123547770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123547772}
+  - component: {fileID: 2123547771}
+  m_Layer: 0
+  m_Name: LineRendererHelperPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &2123547771
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123547770}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2123547772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123547770}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.5, y: 23.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140949845
 GameObject:
   m_ObjectHideFlags: 0
@@ -40428,9 +42701,17 @@ SceneRoots:
   - {fileID: 795327723}
   - {fileID: 623075207}
   - {fileID: 240451306}
-  - {fileID: 485737610}
   - {fileID: 28377133}
   - {fileID: 1257769993}
+  - {fileID: 1437459897}
+  - {fileID: 1588044262}
+  - {fileID: 1355415984}
+  - {fileID: 590572793}
+  - {fileID: 850867924}
+  - {fileID: 1991186847}
+  - {fileID: 1913660239}
+  - {fileID: 1381530041}
+  - {fileID: 2088179074}
   - {fileID: 824613428}
   - {fileID: 1913698582}
   - {fileID: 2041510169}
@@ -40447,6 +42728,8 @@ SceneRoots:
   - {fileID: 1142120518}
   - {fileID: 493822629}
   - {fileID: 463565256}
+  - {fileID: 2123547772}
+  - {fileID: 1925355074}
   - {fileID: 1142097228}
   - {fileID: 1861981453}
   - {fileID: 661235315}

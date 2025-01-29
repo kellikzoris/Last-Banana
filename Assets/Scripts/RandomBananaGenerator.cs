@@ -20,6 +20,7 @@ public class RandomBananaGenerator : MonoBehaviour
         yield return new WaitForSeconds(_timeBetweenBananaSpawns);
         Vector2 spawnPosition = dropBananaTransformPositions[Random.Range(0, dropBananaTransformPositions.Count)].position;
         Banana newBanana = Instantiate(banana, spawnPosition, Quaternion.identity, null);
+        newBanana.SetAsGroundBanana();
         newBanana.gameObject.SetActive(true);
         if (_stopInstantiating)
         {

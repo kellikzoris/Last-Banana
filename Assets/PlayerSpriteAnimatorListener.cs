@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlayerSpriteAnimatorListener : MonoBehaviour
 {
     [SerializeField] private Collider2D _meleeAttackCollider;
-    [SerializeField] Animator _animator;
-    [SerializeField] ParticleSystem _waveAttack;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private ParticleSystem _waveAttack;
 
     public void DisableCollider2D(string s)
     {
@@ -23,7 +23,6 @@ public class PlayerSpriteAnimatorListener : MonoBehaviour
     {
         _animator.SetTrigger("meleeAttack");
     }
-
 
     private void Update()
     {

@@ -20,6 +20,8 @@ public class EnemyWeapon : MonoBehaviour
     private Coroutine spawnMinionCO;
     [SerializeField] private ParticleSystem _swordWhirlwindYellow;
     [SerializeField] private Transform _tornadoReference;
+    [SerializeField] private Transform _tornadoReferenceYellow;
+    [SerializeField] private Transform _tornadoReferenceRed;
 
     public void ShootPlayer()
     {
@@ -129,25 +131,48 @@ public class EnemyWeapon : MonoBehaviour
         }
     }
 
-    public void Start360Attack(bool isSpawningTornadoes, int numberOfTornadoes = 1, float delayBetweenTornadoes = 2)
+    public void Start360Attack(bool isSpawningTornadoes, int tornadoType /*whichCanBe:0,1,2*/, int numberOfTornadoes = 1, float delayBetweenTornadoes = 2)
     {
         Debug.Log("Do360Attack");
         GetComponentInChildren<Animator>().SetBool("360Attack", true);
         _swordWhirlwindYellow.gameObject.SetActive(true);
         if (isSpawningTornadoes)
         {
-            StartCoroutine(SpawnTornadoesWithDelayCO(numberOfTornadoes, delayBetweenTornadoes));
+            StartCoroutine(SpawnTornadoesWithDelayCO(numberOfTornadoes, delayBetweenTornadoes,tornadoType));
         }
     }
 
-    private IEnumerator SpawnTornadoesWithDelayCO(int numberOfTornadoes, float delayBetweenTornadoes)
+    private IEnumerator SpawnTornadoesWithDelayCO(int numberOfTornadoes, float delayBetweenTornadoes, int tornadoType)
     {
-        for (int i = 0; i < numberOfTornadoes; i++)
+        if (tornadoType == 0)
         {
-        
-            Transform newTornado = Instantiate(_tornadoReference, this.transform.position, Quaternion.identity, null);
-            newTornado.GetComponent<Tornado>().StartMovingTowards(_player.transform);
-            yield return new WaitForSeconds(delayBetweenTornadoes);
+            Debug.Log("SpawnWhiteTornado");
+            for (int i = 0; i < numberOfTornadoes; i++)
+            {
+                Transform newTornado = Instantiate(_tornadoReference, this.transform.position, Quaternion.identity, null);
+                newTornado.GetComponent<Tornado>().StartMovingTowards(_player.transform);
+                yield return new WaitForSeconds(delayBetweenTornadoes);
+            }
+        }
+        if (tornadoType == 1)
+        {
+            Debug.Log("SpawnYellowTornado");
+            for (int i = 0; i < numberOfTornadoes; i++)
+            {
+                Transform newTornado = Instantiate(_tornadoReferenceYellow, this.transform.position, Quaternion.identity, null);
+                newTornado.GetComponent<Tornado>().StartMovingTowards(_player.transform);
+                yield return new WaitForSeconds(delayBetweenTornadoes);
+            }
+        }
+        if (tornadoType == 2)
+        {
+            Debug.Log("SpawnRedTornado");
+            for (int i = 0; i < numberOfTornadoes; i++)
+            {
+                Transform newTornado = Instantiate(_tornadoReferenceRed, this.transform.position, Quaternion.identity, null);
+                newTornado.GetComponent<Tornado>().StartMovingTowards(_player.transform);
+                yield return new WaitForSeconds(delayBetweenTornadoes);
+            }
         }
     }
 

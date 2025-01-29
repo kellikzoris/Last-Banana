@@ -15,7 +15,6 @@ public class EnemyLoop : MonoBehaviour
 
     [SerializeField] private ShadowTigerManager _shadowTigerManager;
 
-
     private StompAttack _stompAttack;
 
     private Coroutine callShootCO;
@@ -62,6 +61,15 @@ public class EnemyLoop : MonoBehaviour
         public bool isSpawningTornado;
         public int numberOfTornadoes;
         public float delayBetweenTornadoes;
+
+        public enum TornadoType
+        {
+            whiteTornado,
+            yellowTornado,
+            redTornado
+        }
+
+        public TornadoType tornadoType;
 
         [Space(10)]
         public float timeForThisAction;
@@ -111,14 +119,20 @@ public class EnemyLoop : MonoBehaviour
         public bool isSpawningShield;
 
         [Space(10)]
-        public bool isPlantingATrap=false;
+        public bool isPlantingATrap = false;
+
         public int trapAmount;
 
         [Space(10)]
         public bool isShadowAttacking;
+
         public int shadowTigerAmount;
         public int pawnAttackAmount;
 
+        [Space(10)]
+        public bool darkenEnvironment;
+
+        public int darkenEnvironmentTime;
     }
 
     [SerializeField] private int currentIndex;
@@ -138,7 +152,7 @@ public class EnemyLoop : MonoBehaviour
     private int _currentAmountInStompAttack = 0;
     private Vector2 _lastSpawnedFireTrailPos = Vector2.zero;
 
-    [SerializeField] GorillaTrapPlanter _gorillaTrapPlanter;
+    [SerializeField] private GorillaTrapPlanter _gorillaTrapPlanter;
 
     private void Start()
     {
@@ -225,8 +239,6 @@ public class EnemyLoop : MonoBehaviour
             }
         }
 
-
-
         isShootingToPlayer = currentEnemyMovement.isShootingToPlayer;
 
         isShootingAllDirection = currentEnemyMovement.isShootingAllDirection;
@@ -241,11 +253,15 @@ public class EnemyLoop : MonoBehaviour
 
         isPlantingATrap = currentEnemyMovement.isPlantingATrap;
 
+        if (currentEnemyMovement.darkenEnvironment)
+        {
+            FindObjectOfType<TrackGorillaLocation>(true).SetTrackGorilla(currentEnemyMovement.darkenEnvironmentTime);
+        }
+
         if (currentEnemyMovement.isShadowAttacking)
         {
             _shadowTigerManager.SpawnShadowTigers(currentEnemyMovement.shadowTigerAmount, currentEnemyMovement.pawnAttackAmount);
             yield return new WaitUntil(() => _shadowTigerManager.GetIsSpawnShadowTigerISFinished());
-
         }
 
         if (isRunningTowardsPlayer)
@@ -257,7 +273,10 @@ public class EnemyLoop : MonoBehaviour
 
         if (is360RotationAttack)
         {
-            GetComponent<EnemyWeapon>().Start360Attack(currentEnemyMovement.isSpawningTornado, currentEnemyMovement.numberOfTornadoes, currentEnemyMovement.delayBetweenTornadoes);
+            GetComponent<EnemyWeapon>().Start360Attack(currentEnemyMovement.isSpawningTornado, (int)currentEnemyMovement.tornadoType,
+                currentEnemyMovement.numberOfTornadoes,
+                currentEnemyMovement.delayBetweenTornadoes);
+            GetComponent<Enemy>().CanGetHit(false);
         }
 
         if (isSpawningShields)
@@ -289,6 +308,7 @@ public class EnemyLoop : MonoBehaviour
         else if (!currentEnemyMovement.isEndConditionForReachingTarget)
         {
             yield return new WaitForSeconds(currentEnemyMovement.timeForThisAction);
+            GetComponent<Enemy>().CanGetHit(true);
         }
         else if (isDashingThroughScreen == true)
         {

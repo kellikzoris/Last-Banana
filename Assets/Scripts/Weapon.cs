@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -5,7 +6,11 @@ using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private int _bananaBagCapacity;
+
+    [Space(10)]
     [SerializeField] private List<Banana> _yellowBananasInBag;
+
     [SerializeField] private List<Banana> _greenBananasInBag;
     [SerializeField] private List<Banana> _redBananasInBag;
 
@@ -39,14 +44,43 @@ public class Weapon : MonoBehaviour
         {
             banana.gameObject.SetActive(false);
         }
-        foreach (var banana in _greenBananasInBag)
+        //foreach (var banana in _greenBananasInBag)
+        //{
+        //    banana.gameObject.SetActive(false);
+        //}
+        //foreach (var banana in _redBananasInBag)
+        //{
+        //    banana.gameObject.SetActive(false);
+        //}
+        _yellowBananaAmountLeft.text = $"{_yellowBananasInBag.Count}/{_bananaBagCapacity}";
+    }
+
+    public void EatABananaFromTheBag(Button button)
+    {
+        Banana availableBananaFromBag = GetAvailableBananaFromTheBagAndReduceAmountInBag();
+        if (availableBananaFromBag == null)
         {
-            banana.gameObject.SetActive(false);
+            Debug.Log("No Banana Available");
+            return;
         }
-        foreach (var banana in _redBananasInBag)
-        {
-            banana.gameObject.SetActive(false);
-        }
+        button.interactable = false;
+        GetComponentInChildren<Animator>().SetBool("isEating", true);
+        GetComponent<Player>().RegenerateHealthAfterBananaEaten();
+        GetComponent<Player>().DisableControls();
+        FindObjectOfType<LineRendererDrawer>().DisableAttacks();
+
+        StartCoroutine(EnableControlsAfterDelay(button));
+    }
+
+    private IEnumerator EnableControlsAfterDelay(Button button)
+    {
+        yield return new WaitForSeconds(2);
+        FindObjectOfType<LineRendererDrawer>().EnableAttacks();
+        GetComponent<Player>().EnableControls();
+        GetComponentInChildren<Animator>().SetBool("isEating", false);
+
+        yield return new WaitForSeconds(8);
+        button.interactable = true;
     }
 
     public Banana GetAvailableBananaFromTheBagAndReduceAmountInBag()
@@ -60,9 +94,21 @@ public class Weapon : MonoBehaviour
                 Debug.Log("There are no bananas in the bag");
                 return null;
             }
+
             Banana banana = _yellowBananasInBag[_yellowBananasInBag.Count - 1];
             _yellowBananasInBag.Remove(banana);
-            _yellowBananaAmountLeft.text = $"{_yellowBananasInBag.Count}/5";
+            GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Nothing");
+
+            if (_yellowBananasInBag.Count == 0)
+            {
+                _yellowBananaAmountLeft.color = Color.red;
+            }
+            else
+            {
+                _yellowBananaAmountLeft.color = Color.white;
+            }
+            _yellowBananaAmountLeft.text = $"{_yellowBananasInBag.Count}/{_bananaBagCapacity}";
+
             banana.gameObject.SetActive(true);
             return banana;
         }
@@ -95,19 +141,30 @@ public class Weapon : MonoBehaviour
         return null;
     }
 
-
-    
     public void CollectBananaFromGround(Banana banana)
     {
-        
+        _yellowBananaAmountLeft.color = Color.white;
+
+        if (_yellowBananasInBag.Count >= _bananaBagCapacity)
+        {
+            return;
+        }
+
         banana.GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Player");
-        
 
         if (banana.GetBananaType() == Banana.BananaType.yellow)
         {
             _yellowBananasInBag.Add(banana);
             banana.gameObject.SetActive(false);
-            _yellowBananaAmountLeft.text = $"{_yellowBananasInBag.Count}/5";
+            if (_yellowBananasInBag.Count >= _bananaBagCapacity)
+            {
+                GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Banana");
+                _yellowBananaAmountLeft.text = $"Max";
+            }
+            else
+            {
+                _yellowBananaAmountLeft.text = $"{_yellowBananasInBag.Count}/{_bananaBagCapacity}";
+            }
         }
         else if (banana.GetBananaType() == Banana.BananaType.green)
         {
@@ -152,17 +209,17 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            ChangeBananaTypes(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            ChangeBananaTypes(2);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            ChangeBananaTypes(3);
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
+        //{
+        //    ChangeBananaTypes(1);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    ChangeBananaTypes(2);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha3))
+        //{
+        //    ChangeBananaTypes(3);
+        //}
     }
 }

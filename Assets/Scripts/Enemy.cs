@@ -10,9 +10,20 @@ public class Enemy : MonoBehaviour
     private Coroutine _returnBackToOriginalColorCO;
 
     [SerializeField] private Animator _enemyAnimator;
+    private bool _canGetHit = true;
+
+    public void CanGetHit(bool _bl)
+    {
+        _canGetHit = _bl;
+    }
 
     public void DoEnemyGotHit()
     {
+        if (!_canGetHit)
+        {
+            return;
+        }
+
         _enemyAnimator.SetTrigger("gotDamage");
 
         Debug.Log("Enemy Got Hit");
