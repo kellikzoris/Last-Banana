@@ -123,6 +123,134 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2898046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2898047}
+  - component: {fileID: 2898048}
+  m_Layer: 9
+  m_Name: LevelEndPositiveSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2898047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898046}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2898048
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898046}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: acb9361b22ac20f4d80a7afd7dd809e7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &9761020
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.57254905, g: 0.81568635, b: 0.3137255, a: 1}
+  m_Color: {r: 0.57254905, g: 0.81568635, b: 0.30980393, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1140,6 +1268,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &85473037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85473039}
+  - component: {fileID: 85473038}
+  m_Layer: 9
+  m_Name: BananaAttackSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &85473038
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85473037}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 737b3f69688621b4cb761155e47c55c9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &85473039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85473037}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &106710479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,6 +2300,135 @@ MonoBehaviour:
   offsetDistanceWhenLockedOnTarget: 20
   _debuggerPoint1: {fileID: 1925355074}
   _debuggerPoint2: {fileID: 2123547772}
+  _isThisWelcomeScene: 0
+--- !u!1 &261482015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 261482017}
+  - component: {fileID: 261482016}
+  m_Layer: 9
+  m_Name: CollectBananaSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &261482016
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261482015}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a550cb02580f00c40b4ba02aeff3acb4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &261482017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261482015}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &261998983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2790,6 +3175,167 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &367469889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 367469890}
+  - component: {fileID: 367469894}
+  - component: {fileID: 367469893}
+  - component: {fileID: 367469892}
+  - component: {fileID: 367469891}
+  m_Layer: 5
+  m_Name: YesButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &367469890
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367469889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1712165967}
+  m_Father: {fileID: 1730007881}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -180, y: -75}
+  m_SizeDelta: {x: 100, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &367469891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367469889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -4, y: -4}
+  m_UseGraphicAlpha: 1
+--- !u!114 &367469892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367469889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 367469893}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneManagerOfGorilla, Assembly-CSharp
+        m_MethodName: LoadSelectedScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1886687574}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &367469893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367469889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3, g: 0.5, b: 0.099999994, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &367469894
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367469889}
+  m_CullTransparentMesh: 1
 --- !u!1 &379979667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,6 +3347,7 @@ GameObject:
   - component: {fileID: 379979668}
   - component: {fileID: 379979670}
   - component: {fileID: 379979669}
+  - component: {fileID: 379979671}
   m_Layer: 5
   m_Name: PlayerImage
   m_TagString: Untagged
@@ -2865,6 +3412,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379979667}
   m_CullTransparentMesh: 1
+--- !u!114 &379979671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379979667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &380226141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,6 +3869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be623dde84f2ac344b77e7bbccfea0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeTimeOfTheDamageZone: 7
 --- !u!58 &463565253
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3636,6 +4199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be623dde84f2ac344b77e7bbccfea0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeTimeOfTheDamageZone: 7
 --- !u!58 &493822626
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4200,6 +4764,134 @@ MonoBehaviour:
   _player: {fileID: 795327721}
   _offsetValue: {x: 0, y: 0, z: 0}
   _enableCameraTracking: 0
+--- !u!1 &527463711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527463712}
+  - component: {fileID: 527463713}
+  m_Layer: 9
+  m_Name: JungleBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527463712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527463711}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &527463713
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527463711}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6748d9c9b5cbe4587840cc2e5bfe7a7c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.15
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &536608403
 GameObject:
   m_ObjectHideFlags: 0
@@ -5149,6 +5841,8 @@ MonoBehaviour:
   _enemyHealthTextField: {fileID: 72886948}
   _enemyHealthLeft: {fileID: 25746643}
   _enemyAnimator: {fileID: 1954491283}
+  _isThisWelcomeScene: 0
+  _enemyGotDamageAfterEachHit: 2
 --- !u!114 &623075211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5229,6 +5923,44 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 30
+    targetPosition: {x: -5.5, y: 18}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1
+    isChargeAttackRun: 1
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5245,6 +5977,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -5264,6 +5997,7 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5280,12 +6014,13 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2_sec
+  - name: WaitForSeconds_1_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
     isStompAttack: 0
@@ -5296,9 +6031,10 @@ MonoBehaviour:
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
     tornadoType: 0
-    timeForThisAction: 2
+    timeForThisAction: 1
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5315,6 +6051,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -5334,6 +6071,44 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 30
+    targetPosition: {x: 1.7, y: -6}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_3
+    isChargeAttackRun: 1
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5350,6 +6125,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -5369,6 +6145,7 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5385,12 +6162,13 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2_sec
+  - name: WaitForSeconds_1_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
     isStompAttack: 0
@@ -5404,6 +6182,7 @@ MonoBehaviour:
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5420,6 +6199,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -5439,6 +6219,7 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5455,12 +6236,13 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: WaitForSeconds_1
+  - name: WaitForSeconds_halfSecond
     isChargeAttackRun: 0
     withFireTrailBehind: 0
     isStompAttack: 0
@@ -5471,9 +6253,10 @@ MonoBehaviour:
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
     tornadoType: 0
-    timeForThisAction: 1
+    timeForThisAction: 0.5
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5490,6 +6273,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -5509,6 +6293,7 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5525,12 +6310,13 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2
+  - name: WaitForSeconds_1
     isChargeAttackRun: 0
     withFireTrailBehind: 0
     isStompAttack: 0
@@ -5544,6 +6330,7 @@ MonoBehaviour:
     timeForThisAction: 2
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5560,12 +6347,13 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: 360RotatingAttackFor_5_Seconds
+  - name: 360RotatingAttackFor_2_Seconds
     isChargeAttackRun: 0
     withFireTrailBehind: 0
     isStompAttack: 0
@@ -5576,9 +6364,10 @@ MonoBehaviour:
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
     tornadoType: 0
-    timeForThisAction: 5
+    timeForThisAction: 2
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5595,13 +6384,14 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
   enemyMovementsForTheSecondPhase:
-  - name: ChargeAttackRun_1_WithFireTrail
+  - name: ChargeAttackRun_8Shape_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
     isStompAttack: 0
@@ -5615,12 +6405,13 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 40
-    targetPosition: {x: 40, y: 16}
+    targetPosition: {x: -24, y: 12.5}
     isShootingToPlayer: 0
     timeBetweenShots: 0
     isShootingAllDirection: 0
@@ -5631,12 +6422,13 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: ChargeAttackRun_2_WithFireTrail
+  - name: ChargeAttackRun_8Shape_WithFireTrail
     isChargeAttackRun: 1
     withFireTrailBehind: 1
     isStompAttack: 0
@@ -5650,12 +6442,13 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
     isMoving: 1
     movementSpeed: 40
-    targetPosition: {x: 30, y: -22}
+    targetPosition: {x: 24, y: -20}
     isShootingToPlayer: 0
     timeBetweenShots: 0
     isShootingAllDirection: 0
@@ -5666,12 +6459,309 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2_sec
+  - name: ChargeAttackRun_8Shape_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 40
+    targetPosition: {x: 38, y: -11}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_8Shape_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 40
+    targetPosition: {x: 40, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_8Shape_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 40
+    targetPosition: {x: 32, y: 11}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_8Shape_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 40
+    targetPosition: {x: 20, y: 12.5}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_8Shape_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 40
+    targetPosition: {x: -24, y: -20}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_8Shape_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 40
+    targetPosition: {x: -38, y: -12}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_8Shape_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 40
+    targetPosition: {x: -40, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_8Shape_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 40
+    targetPosition: {x: -33, y: 10}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: WaitForSeconds_1_sec
     isChargeAttackRun: 0
     withFireTrailBehind: 0
     isStompAttack: 0
@@ -5682,9 +6772,10 @@ MonoBehaviour:
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
     tornadoType: 0
-    timeForThisAction: 2
+    timeForThisAction: 1
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5701,111 +6792,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: ChargeAttackRun_3_WithFireTrail
-    isChargeAttackRun: 1
-    withFireTrailBehind: 1
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 0
-    isEndConditionForReachingTarget: 1
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 1
-    movementSpeed: 40
-    targetPosition: {x: -40, y: -22}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: ChargeAttackRun_4_WithFireTrail
-    isChargeAttackRun: 1
-    withFireTrailBehind: 1
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 0
-    isEndConditionForReachingTarget: 1
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 1
-    movementSpeed: 40
-    targetPosition: {x: -30, y: 16}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2_sec
-    isChargeAttackRun: 0
-    withFireTrailBehind: 0
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 2
-    isEndConditionForReachingTarget: 0
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 0
-    movementSpeed: 0
-    targetPosition: {x: 0, y: 0}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -5825,6 +6812,7 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 1
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5841,6 +6829,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -5860,6 +6849,7 @@ MonoBehaviour:
     timeForThisAction: 1
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5876,16 +6866,91 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: StompAttack_7_Cycle
+  - name: 360RotatingAttackFor_3_Seconds_WithTornadoSpawning
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 1
+    isSpawningTornado: 1
+    numberOfTornadoes: 3
+    delayBetweenTornadoes: 1
+    tornadoType: 0
+    timeForThisAction: 4
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: WaitForSeconds_1
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 1
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: StompAttack_3_Cycle
     isChargeAttackRun: 0
     withFireTrailBehind: 0
     isStompAttack: 1
-    stompAmount: 7
+    stompAmount: 3
     stompSize: 0.5
     is360RotationAttack: 0
     isSpawningTornado: 0
@@ -5895,6 +6960,7 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -5911,322 +6977,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2
-    isChargeAttackRun: 0
-    withFireTrailBehind: 0
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 2
-    isEndConditionForReachingTarget: 0
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 0
-    movementSpeed: 0
-    targetPosition: {x: 0, y: 0}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: 360RotatingAttackFor_5_Seconds_WithTornadoSpawning
-    isChargeAttackRun: 0
-    withFireTrailBehind: 0
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 1
-    isSpawningTornado: 1
-    numberOfTornadoes: 4
-    delayBetweenTornadoes: 1
-    tornadoType: 0
-    timeForThisAction: 5
-    isEndConditionForReachingTarget: 0
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 0
-    movementSpeed: 0
-    targetPosition: {x: 0, y: 0}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  enemyMovementsForTheThirdPhase:
-  - name: ChargeAttackRun_1_WithFireTrail
-    isChargeAttackRun: 1
-    withFireTrailBehind: 1
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 0
-    isEndConditionForReachingTarget: 1
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 1
-    movementSpeed: 50
-    targetPosition: {x: 40, y: 16}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: ChargeAttackRun_2_WithFireTrail
-    isChargeAttackRun: 1
-    withFireTrailBehind: 1
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 0
-    isEndConditionForReachingTarget: 1
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 1
-    movementSpeed: 50
-    targetPosition: {x: 30, y: -22}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2_sec
-    isChargeAttackRun: 0
-    withFireTrailBehind: 0
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 2
-    isEndConditionForReachingTarget: 0
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 0
-    movementSpeed: 0
-    targetPosition: {x: 0, y: 0}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: ChargeAttackRun_3_WithFireTrail
-    isChargeAttackRun: 1
-    withFireTrailBehind: 1
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 0
-    isEndConditionForReachingTarget: 1
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 1
-    movementSpeed: 50
-    targetPosition: {x: -40, y: -22}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: ChargeAttackRun_4_WithFireTrail
-    isChargeAttackRun: 1
-    withFireTrailBehind: 1
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 0
-    isEndConditionForReachingTarget: 1
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 1
-    movementSpeed: 50
-    targetPosition: {x: -30, y: 16}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2_sec
-    isChargeAttackRun: 0
-    withFireTrailBehind: 0
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 2
-    isEndConditionForReachingTarget: 0
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 0
-    movementSpeed: 0
-    targetPosition: {x: 0, y: 0}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
-    isShadowAttacking: 0
-    shadowTigerAmount: 0
-    pawnAttackAmount: 0
-    darkenEnvironment: 0
-    darkenEnvironmentTime: 0
-  - name: ChargeAttackRun_5_WithFireTrail
-    isChargeAttackRun: 1
-    withFireTrailBehind: 1
-    isStompAttack: 0
-    stompAmount: 0
-    stompSize: 0
-    is360RotationAttack: 0
-    isSpawningTornado: 0
-    numberOfTornadoes: 0
-    delayBetweenTornadoes: 0
-    tornadoType: 0
-    timeForThisAction: 0
-    isEndConditionForReachingTarget: 1
-    isRunningTowardsPlayer: 0
-    stopDistanceWithPlayer: 0
-    amountOfPawnAttacks: 0
-    timeDelayBetweenPawnAttacks: 0
-    isMoving: 1
-    movementSpeed: 50
-    targetPosition: {x: -25, y: -2}
-    isShootingToPlayer: 0
-    timeBetweenShots: 0
-    isShootingAllDirection: 0
-    timeBetweenAllDirectionShots: 0
-    isDashingThroughScreen: 0
-    isSpawningMinions: 0
-    timeBetweenSpawningMinions: 0
-    isSpawningShield: 0
-    isPlantingATrap: 0
-    trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -6246,6 +6997,7 @@ MonoBehaviour:
     timeForThisAction: 1
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -6262,6 +7014,748 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: 360RotatingAttackFor_3_Seconds_WithTornadoSpawning
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 1
+    isSpawningTornado: 1
+    numberOfTornadoes: 3
+    delayBetweenTornadoes: 1
+    tornadoType: 0
+    timeForThisAction: 4
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: WaitForSeconds_1
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 1
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  enemyMovementsForTheThirdPhase:
+  - name: WaitForSeconds_1
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 1
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -44.6, y: 1}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -38.7, y: -14.7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -28.4, y: -21}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -15.5, y: -21.3}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -5.9, y: -15.1}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -0.2, y: -5.7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -0.2, y: 6.3}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -6.5, y: 15.2}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -22.2, y: 17.4}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -30.7, y: 9.7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -33.5, y: -1.5}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -26.3, y: -10.1}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -14, y: -7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -12.2, y: 4.4}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -19.6, y: 5.3}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: -19.1, y: 0.7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: WaitForSeconds_0.5f
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0.5
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -6281,6 +7775,7 @@ MonoBehaviour:
     timeForThisAction: 0
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -6297,12 +7792,13 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
     darkenEnvironment: 0
     darkenEnvironmentTime: 0
-  - name: WaitForSeconds_2
+  - name: WaitForSeconds_0.5f
     isChargeAttackRun: 0
     withFireTrailBehind: 0
     isStompAttack: 0
@@ -6313,9 +7809,10 @@ MonoBehaviour:
     numberOfTornadoes: 0
     delayBetweenTornadoes: 0
     tornadoType: 0
-    timeForThisAction: 2
+    timeForThisAction: 0.5
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -6332,6 +7829,7 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -6351,6 +7849,7 @@ MonoBehaviour:
     timeForThisAction: 10
     isEndConditionForReachingTarget: 0
     isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
     stopDistanceWithPlayer: 0
     amountOfPawnAttacks: 0
     timeDelayBetweenPawnAttacks: 0
@@ -6367,6 +7866,858 @@ MonoBehaviour:
     isSpawningShield: 0
     isPlantingATrap: 0
     trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: WaitForSeconds_0.5f
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0.5
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 50.5, y: -7.3}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 45.7, y: 6.5}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 35.4, y: 14.5}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 20.9, y: 14.3}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 9.3, y: 6.9}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 5.3, y: -4.7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 7.6, y: -16.7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 17.8, y: -23.6}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 30.1, y: -22.7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 38.3, y: -14.1}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 38.5, y: -3.8}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 30.5, y: 3.7}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 18.8, y: -0.3}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 16.6, y: -9.1}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 22.1, y: -13.3}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 28.1, y: -8.8}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: ChargeAttackRun_1_WithFireTrail
+    isChargeAttackRun: 1
+    withFireTrailBehind: 1
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 1
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 1
+    movementSpeed: 50
+    targetPosition: {x: 28.7, y: -5.3}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: WaitForSeconds_0.5f
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0.5
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: StompAttack_9_Cycle
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 1
+    stompAmount: 7
+    stompSize: 0.5
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: WaitForSeconds_0.5f
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 0.5
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: 360RotatingAttackFor_5_Seconds_WithTornadoSpawning
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 1
+    isSpawningTornado: 1
+    numberOfTornadoes: 9
+    delayBetweenTornadoes: 1
+    tornadoType: 0
+    timeForThisAction: 10
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
+    isShadowAttacking: 0
+    shadowTigerAmount: 0
+    pawnAttackAmount: 0
+    darkenEnvironment: 0
+    darkenEnvironmentTime: 0
+  - name: WaitForSeconds_1
+    isChargeAttackRun: 0
+    withFireTrailBehind: 0
+    isStompAttack: 0
+    stompAmount: 0
+    stompSize: 0
+    is360RotationAttack: 0
+    isSpawningTornado: 0
+    numberOfTornadoes: 0
+    delayBetweenTornadoes: 0
+    tornadoType: 0
+    timeForThisAction: 1
+    isEndConditionForReachingTarget: 0
+    isRunningTowardsPlayer: 0
+    movementSpeedWhileRunningTowardsPlayer: 0
+    stopDistanceWithPlayer: 0
+    amountOfPawnAttacks: 0
+    timeDelayBetweenPawnAttacks: 0
+    isMoving: 0
+    movementSpeed: 0
+    targetPosition: {x: 0, y: 0}
+    isShootingToPlayer: 0
+    timeBetweenShots: 0
+    isShootingAllDirection: 0
+    timeBetweenAllDirectionShots: 0
+    isDashingThroughScreen: 0
+    isSpawningMinions: 0
+    timeBetweenSpawningMinions: 0
+    isSpawningShield: 0
+    isPlantingATrap: 0
+    trapAmount: 0
+    timeBetweenTraps: 0
     isShadowAttacking: 0
     shadowTigerAmount: 0
     pawnAttackAmount: 0
@@ -6460,6 +8811,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &631085247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 631085249}
+  - component: {fileID: 631085248}
+  m_Layer: 9
+  m_Name: EatingSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &631085248
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631085247}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 10c6337945467b348b313704e088bc57, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &631085249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631085247}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645747727
 GameObject:
   m_ObjectHideFlags: 0
@@ -11416,6 +13895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be623dde84f2ac344b77e7bbccfea0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeTimeOfTheDamageZone: 7
 --- !u!50 &661235314
 Rigidbody2D:
   serializedVersion: 4
@@ -11676,6 +14156,418 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &671358489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671358490}
+  - component: {fileID: 671358492}
+  - component: {fileID: 671358491}
+  - component: {fileID: 671358493}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &671358490
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671358489}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1730007881}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 5}
+  m_SizeDelta: {x: -40, y: -30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &671358491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671358489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Let's find out who deserves the crown of the jungle!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &671358492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671358489}
+  m_CullTransparentMesh: 1
+--- !u!114 &671358493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671358489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0724b546c5da559489b342e5fb640a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _yesButton: {fileID: 367469892}
+  _noButton: {fileID: 1214310098}
+  _startButton: {fileID: 1579793357}
+--- !u!1 &706932627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 706932628}
+  - component: {fileID: 706932630}
+  - component: {fileID: 706932629}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &706932628
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706932627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1214310096}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &706932629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706932627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: No
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &706932630
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706932627}
+  m_CullTransparentMesh: 1
+--- !u!1 &711239257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711239258}
+  - component: {fileID: 711239259}
+  m_Layer: 9
+  m_Name: LevelEndNegativeSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &711239258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711239257}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &711239259
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711239257}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4bf7472e7a95d344f867106196075ea2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &737300807
 GameObject:
   m_ObjectHideFlags: 0
@@ -11687,6 +14579,7 @@ GameObject:
   - component: {fileID: 737300808}
   - component: {fileID: 737300810}
   - component: {fileID: 737300809}
+  - component: {fileID: 737300811}
   m_Layer: 5
   m_Name: Yellow Banana Field
   m_TagString: Untagged
@@ -11728,7 +14621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08235294, g: 0.37647063, b: 0.50980395, a: 1}
+  m_Color: {r: 0.9490196, g: 0.7647059, b: 0.6313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11753,6 +14646,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737300807}
   m_CullTransparentMesh: 1
+--- !u!114 &737300811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737300807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.348, g: 0.16171764, b: 0.17809412, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &739208685
 GameObject:
   m_ObjectHideFlags: 0
@@ -11769,7 +14677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &739208686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11810,7 +14718,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11831,7 +14739,7 @@ Transform:
   m_GameObject: {fileID: 739208685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: -22, z: 0}
+  m_LocalPosition: {x: 28.7, y: -5.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16917,6 +19825,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &792111249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 792111251}
+  - component: {fileID: 792111250}
+  m_Layer: 9
+  m_Name: ClickButtonSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &792111250
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792111249}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6458cfff69c906e4e947b802ab1bd420, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &792111251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792111249}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &795284585
 GameObject:
   m_ObjectHideFlags: 0
@@ -16928,6 +19964,7 @@ GameObject:
   - component: {fileID: 795284586}
   - component: {fileID: 795284588}
   - component: {fileID: 795284587}
+  - component: {fileID: 795284589}
   m_Layer: 5
   m_Name: Player Field
   m_TagString: Untagged
@@ -16969,7 +20006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08235294, g: 0.37647063, b: 0.50980395, a: 1}
+  m_Color: {r: 0.9490197, g: 0.76470596, b: 0.6313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16994,6 +20031,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795284585}
   m_CullTransparentMesh: 1
+--- !u!114 &795284589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795284585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.348, g: 0.16171764, b: 0.17809412, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &795327718
 GameObject:
   m_ObjectHideFlags: 0
@@ -17083,7 +20135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795327718}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 077eb167891d9fe4a99b29d5202ee344, type: 3}
   m_Name: 
@@ -17099,6 +20151,7 @@ MonoBehaviour:
   _playerSpriteTransform: {fileID: 1735171099}
   _playerAnimator: {fileID: 1735171100}
   _dashTrail: {fileID: 0}
+  isThisWelcomeScene: 0
 --- !u!4 &795327723
 Transform:
   m_ObjectHideFlags: 0
@@ -17500,6 +20553,7 @@ GameObject:
   - component: {fileID: 824613427}
   - component: {fileID: 824613426}
   - component: {fileID: 824613425}
+  - component: {fileID: 824613429}
   m_Layer: 5
   m_Name: GUI
   m_TagString: Untagged
@@ -17591,6 +20645,7 @@ RectTransform:
   - {fileID: 664772641}
   - {fileID: 9833214}
   - {fileID: 1766632774}
+  - {fileID: 1840813058}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -17598,6 +20653,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &824613429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824613424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a0ca9aaa791a74d9c068e955e10aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsToDisable:
+  - {fileID: 1144749751}
+  - {fileID: 664772640}
+  gameObjectToEnable: {fileID: 1840813057}
+  textFieldToUpdate: {fileID: 671358491}
+  yesButton: {fileID: 367469892}
+  noButton: {fileID: 1214310098}
 --- !u!1 &832181939
 GameObject:
   m_ObjectHideFlags: 0
@@ -17986,7 +21060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.57254905, g: 0.81568635, b: 0.3137255, a: 1}
+  m_Color: {r: 0.57254905, g: 0.81568635, b: 0.30980393, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18397,6 +21471,140 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &905404564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905404565}
+  - component: {fileID: 905404567}
+  - component: {fileID: 905404566}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &905404565
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905404564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1579793354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &905404566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905404564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Start The Fight
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &905404567
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905404564}
+  m_CullTransparentMesh: 1
 --- !u!1 &926990746
 GameObject:
   m_ObjectHideFlags: 0
@@ -19897,6 +23105,7 @@ GameObject:
   - component: {fileID: 1119069440}
   - component: {fileID: 1119069442}
   - component: {fileID: 1119069441}
+  - component: {fileID: 1119069443}
   m_Layer: 5
   m_Name: PlayerHealth
   m_TagString: Untagged
@@ -19962,6 +23171,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119069439}
   m_CullTransparentMesh: 1
+--- !u!114 &1119069443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119069439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1126579124
 GameObject:
   m_ObjectHideFlags: 0
@@ -20320,6 +23544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be623dde84f2ac344b77e7bbccfea0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeTimeOfTheDamageZone: 7
 --- !u!58 &1142120515
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21689,6 +24914,179 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1214310095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1214310096}
+  - component: {fileID: 1214310100}
+  - component: {fileID: 1214310099}
+  - component: {fileID: 1214310098}
+  - component: {fileID: 1214310097}
+  m_Layer: 5
+  m_Name: NoButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1214310096
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214310095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 706932628}
+  m_Father: {fileID: 1730007881}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 180, y: -75}
+  m_SizeDelta: {x: 100, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1214310097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214310095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -4, y: -4}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1214310098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214310095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1214310099}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1840813057}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneManagerOfGorilla, Assembly-CSharp
+        m_MethodName: EnablePlayerAttackAndPlayerControls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1886687574}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1214310099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214310095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.75294125, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1214310100
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214310095}
+  m_CullTransparentMesh: 1
 --- !u!1 &1240320757
 GameObject:
   m_ObjectHideFlags: 0
@@ -22123,8 +25521,8 @@ GameObject:
   - component: {fileID: 1268213843}
   - component: {fileID: 1268213842}
   - component: {fileID: 1268213841}
-  - component: {fileID: 1268213840}
   - component: {fileID: 1268213844}
+  - component: {fileID: 1268213845}
   m_Layer: 5
   m_Name: EatBanana
   m_TagString: Untagged
@@ -22153,21 +25551,6 @@ RectTransform:
   m_AnchoredPosition: {x: -230, y: 20}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &1268213840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268213838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: -4, y: -4}
-  m_UseGraphicAlpha: 1
 --- !u!114 &1268213841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22237,7 +25620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23889089, g: 0.50980395, b: 0.08235293, a: 1}
+  m_Color: {r: 0.9490196, g: 0.7647059, b: 0.6313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22274,6 +25657,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f17a02ec60c0a42a7cf63087aa03b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1268213845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268213838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.348, g: 0.16171764, b: 0.17809412, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1269019150
 GameObject:
   m_ObjectHideFlags: 0
@@ -22676,8 +26074,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -22700,7 +26098,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
@@ -24705,8 +28103,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -24723,13 +28121,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
@@ -25109,6 +28507,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1511775672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1511775673}
+  - component: {fileID: 1511775674}
+  m_Layer: 9
+  m_Name: BullKickGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1511775673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511775672}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1511775674
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511775672}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 99ae05875145be5439c563da0baa7321, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1520046059
 GameObject:
   m_ObjectHideFlags: 0
@@ -25781,6 +29307,243 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1579793353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1579793354}
+  - component: {fileID: 1579793359}
+  - component: {fileID: 1579793358}
+  - component: {fileID: 1579793357}
+  - component: {fileID: 1579793356}
+  - component: {fileID: 1579793355}
+  m_Layer: 5
+  m_Name: StartFightButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1579793354
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579793353}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 905404565}
+  m_Father: {fileID: 1730007881}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -90}
+  m_SizeDelta: {x: 220, y: 45}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1579793355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579793353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0e44e954a5e884fa84debffdc45d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startColor: {r: 0.29803923, g: 0.5019608, b: 0.098039225, a: 1}
+  _endColor: {r: 0.47499996, g: 0.8, b: 0.15625, a: 1}
+  _duration: 1
+--- !u!114 &1579793356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579793353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -4, y: -4}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1579793357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579793353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1579793358}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1579793353}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1214310095}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 367469889}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1840813057}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 795327721}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 623075214}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1886687574}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1579793358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579793353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3, g: 0.5, b: 0.099999994, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1579793359
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579793353}
+  m_CullTransparentMesh: 1
 --- !u!1 &1588044257
 GameObject:
   m_ObjectHideFlags: 0
@@ -26046,6 +29809,7 @@ GameObject:
   - component: {fileID: 1589838916}
   - component: {fileID: 1589838918}
   - component: {fileID: 1589838917}
+  - component: {fileID: 1589838919}
   m_Layer: 5
   m_Name: EnemyHealth
   m_TagString: Untagged
@@ -26111,6 +29875,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589838915}
   m_CullTransparentMesh: 1
+--- !u!114 &1589838919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589838915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1594158988
 GameObject:
   m_ObjectHideFlags: 0
@@ -26447,6 +30226,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1630979197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1630979198}
+  - component: {fileID: 1630979199}
+  m_Layer: 9
+  m_Name: BullMovementSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1630979198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630979197}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1630979199
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630979197}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 184cfce647c4bdc42a87910ce46a5c38, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1632550687
 GameObject:
   m_ObjectHideFlags: 0
@@ -27085,6 +30992,140 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1712165966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712165967}
+  - component: {fileID: 1712165969}
+  - component: {fileID: 1712165968}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1712165967
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712165966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367469890}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1712165968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712165966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Yes
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1712165969
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712165966}
+  m_CullTransparentMesh: 1
 --- !u!1 &1723867430
 GameObject:
   m_ObjectHideFlags: 0
@@ -27169,6 +31210,101 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1730007880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730007881}
+  - component: {fileID: 1730007883}
+  - component: {fileID: 1730007882}
+  - component: {fileID: 1730007884}
+  m_Layer: 5
+  m_Name: TextBackgroundImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1730007881
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730007880}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 671358490}
+  - {fileID: 367469890}
+  - {fileID: 1579793354}
+  - {fileID: 1214310096}
+  m_Father: {fileID: 1840813058}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 600, y: 160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1730007882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730007880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.08235294, g: 0.3254902, b: 0.38039216, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 68bd1fb7d633b8d468b617e90ba8c486, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1730007883
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730007880}
+  m_CullTransparentMesh: 1
+--- !u!114 &1730007884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730007880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.9921569, g: 0.8588236, b: 0.43921572, a: 0.5}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1732097409
 GameObject:
   m_ObjectHideFlags: 0
@@ -27376,6 +31512,7 @@ MonoBehaviour:
   _meleeAttackCollider: {fileID: 1909174091}
   _animator: {fileID: 1735171100}
   _waveAttack: {fileID: 294813343}
+  _isThisWelcomeScene: 0
 --- !u!1 &1761694154
 GameObject:
   m_ObjectHideFlags: 0
@@ -28046,6 +32183,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1840813057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840813058}
+  - component: {fileID: 1840813060}
+  - component: {fileID: 1840813059}
+  m_Layer: 5
+  m_Name: LevelEndText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1840813058
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840813057}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1730007881}
+  m_Father: {fileID: 824613428}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1024, y: 576}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1840813059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840813057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: eb2cb336d43c8cc498720b8be4a1e419, type: 2}
+  m_Color: {r: 0.45, g: 0.45, b: 0.45, a: 0.34901962}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1840813060
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840813057}
+  m_CullTransparentMesh: 1
 --- !u!1 &1850693159
 GameObject:
   m_ObjectHideFlags: 0
@@ -28218,6 +32431,7 @@ GameObject:
   - component: {fileID: 1863805649}
   - component: {fileID: 1863805651}
   - component: {fileID: 1863805650}
+  - component: {fileID: 1863805652}
   m_Layer: 5
   m_Name: BananaImage
   m_TagString: Untagged
@@ -28282,6 +32496,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863805648}
   m_CullTransparentMesh: 1
+--- !u!114 &1863805652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863805648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1865194925
 GameObject:
   m_ObjectHideFlags: 0
@@ -28293,6 +32522,7 @@ GameObject:
   - component: {fileID: 1865194926}
   - component: {fileID: 1865194928}
   - component: {fileID: 1865194927}
+  - component: {fileID: 1865194929}
   m_Layer: 5
   m_Name: Enemy Field
   m_TagString: Untagged
@@ -28334,7 +32564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08235294, g: 0.37647063, b: 0.50980395, a: 1}
+  m_Color: {r: 0.9490197, g: 0.76470596, b: 0.6313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -28359,6 +32589,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865194925}
   m_CullTransparentMesh: 1
+--- !u!114 &1865194929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865194925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.348, g: 0.16171764, b: 0.17809412, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1867095525
 GameObject:
   m_ObjectHideFlags: 0
@@ -28611,6 +32856,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1886687573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1886687575}
+  - component: {fileID: 1886687574}
+  m_Layer: 9
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1886687574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886687573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d880e6986b7d1d4494716f79dd68cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bananaAttackSound: {fileID: 85473038}
+  eatingBananaSound: {fileID: 631085248}
+  meleeAttackGorilla: {fileID: 1899446774}
+  clickButtonSound: {fileID: 792111250}
+  collectBananaSound: {fileID: 261482016}
+  bullMovementSound: {fileID: 0}
+  tigerAttackSound: {fileID: 0}
+  trapPlantedSound: {fileID: 0}
+  trapClosedSound: {fileID: 0}
+  bullKickingGround: {fileID: 1511775674}
+  lostSound: {fileID: 711239259}
+  winSound: {fileID: 2898048}
+--- !u!4 &1886687575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886687573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 85473039}
+  - {fileID: 631085249}
+  - {fileID: 527463712}
+  - {fileID: 1899446775}
+  - {fileID: 792111251}
+  - {fileID: 261482017}
+  - {fileID: 1976513551}
+  - {fileID: 1630979198}
+  - {fileID: 1511775673}
+  - {fileID: 2898047}
+  - {fileID: 711239258}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1888288611
 GameObject:
   m_ObjectHideFlags: 0
@@ -28863,6 +33175,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1899446773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899446775}
+  - component: {fileID: 1899446774}
+  m_Layer: 9
+  m_Name: GorillaMeleeAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1899446774
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899446773}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3d3ca8e65758b9d4a80dc2c61fb016b4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1899446775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899446773}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909174089
 GameObject:
   m_ObjectHideFlags: 0
@@ -34649,6 +39089,7 @@ MonoBehaviour:
   _gorillaTrapPlanter: {fileID: 0}
   _shadowTiger: {fileID: 0}
   _isThisShadowTiger: 0
+  soundManager: {fileID: 1886687574}
 --- !u!1 &1954672073
 GameObject:
   m_ObjectHideFlags: 0
@@ -35147,6 +39588,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1976513550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1976513551}
+  - component: {fileID: 1976513552}
+  m_Layer: 9
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1976513551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976513550}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886687575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1976513552
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976513550}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b3bc3dc4dba54b643beda39257584efd, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.05
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1981679513
 GameObject:
   m_ObjectHideFlags: 0
@@ -36142,6 +40711,7 @@ GameObject:
   - component: {fileID: 2021591704}
   - component: {fileID: 2021591706}
   - component: {fileID: 2021591705}
+  - component: {fileID: 2021591707}
   m_Layer: 5
   m_Name: EnemyImage
   m_TagString: Untagged
@@ -36206,6 +40776,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021591703}
   m_CullTransparentMesh: 1
+--- !u!114 &2021591707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021591703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2023331132
 GameObject:
   m_ObjectHideFlags: 0
@@ -41123,6 +45708,7 @@ MonoBehaviour:
   _timeBetweenBananaSpawns: 2
   banana: {fileID: 1437459895}
   _stopInstantiating: 0
+  _possibleTransform: {fileID: 0}
 --- !u!4 &2044495346
 Transform:
   m_ObjectHideFlags: 0
@@ -42726,6 +47312,7 @@ SceneRoots:
   - {fileID: 106710480}
   - {fileID: 1061844161}
   - {fileID: 1142120518}
+  - {fileID: 1886687575}
   - {fileID: 493822629}
   - {fileID: 463565256}
   - {fileID: 2123547772}

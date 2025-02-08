@@ -28,6 +28,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Button _greenBananaButton;
     [SerializeField] private Button _redBananaButton;
 
+    private List<Banana> excludedBananaList = new List<Banana>();
+
     public enum BananaType
     {
         yellow,
@@ -63,7 +65,9 @@ public class Weapon : MonoBehaviour
             Debug.Log("No Banana Available");
             return;
         }
+
         button.interactable = false;
+        FindObjectOfType<SoundManager>().PlayEatingBananaSound();
         GetComponentInChildren<Animator>().SetBool("isEating", true);
         GetComponent<Player>().RegenerateHealthAfterBananaEaten();
         GetComponent<Player>().DisableControls();
@@ -99,13 +103,15 @@ public class Weapon : MonoBehaviour
             _yellowBananasInBag.Remove(banana);
             GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Nothing");
 
+            //GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Ignore Raycast");
+
             if (_yellowBananasInBag.Count == 0)
             {
-                _yellowBananaAmountLeft.color = Color.red;
+                _yellowBananaAmountLeft.color = new Color(.75f, 0, 0, 1);
             }
             else
             {
-                _yellowBananaAmountLeft.color = Color.white;
+                _yellowBananaAmountLeft.color = Color.black;
             }
             _yellowBananaAmountLeft.text = $"{_yellowBananasInBag.Count}/{_bananaBagCapacity}";
 
@@ -143,28 +149,41 @@ public class Weapon : MonoBehaviour
 
     public void CollectBananaFromGround(Banana banana)
     {
-        _yellowBananaAmountLeft.color = Color.white;
+        _yellowBananaAmountLeft.color = Color.black;
 
         if (_yellowBananasInBag.Count >= _bananaBagCapacity)
         {
+            GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Banana");
+            _yellowBananaAmountLeft.text = $"Max";
             return;
         }
-
-        banana.GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Player");
+        //else
+        //{
+        //}
 
         if (banana.GetBananaType() == Banana.BananaType.yellow)
         {
+            //if (_yellowBananasInBag.Count >= _bananaBagCapacity)
+            //{
+            //    GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Banana");
+            //    _yellowBananaAmountLeft.text = $"Max";
+            //}
+            //else
+            //{
+            FindObjectOfType<SoundManager>().PlayCollectingBananaSound();
+
             _yellowBananasInBag.Add(banana);
             banana.gameObject.SetActive(false);
+            FindObjectOfType<RandomBananaGenerator>().DropBananaFromDictionary(banana.transform);
+
+            _yellowBananaAmountLeft.text = $"{_yellowBananasInBag.Count}/{_bananaBagCapacity}";
+
             if (_yellowBananasInBag.Count >= _bananaBagCapacity)
             {
                 GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Banana");
                 _yellowBananaAmountLeft.text = $"Max";
             }
-            else
-            {
-                _yellowBananaAmountLeft.text = $"{_yellowBananasInBag.Count}/{_bananaBagCapacity}";
-            }
+            //}
         }
         else if (banana.GetBananaType() == Banana.BananaType.green)
         {

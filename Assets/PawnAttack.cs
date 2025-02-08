@@ -4,26 +4,24 @@ using UnityEngine;
 public class PawnAttack : MonoBehaviour
 {
     [SerializeField] private Enemy _enemy;
-
     [SerializeField] private EnemyLoop _enemyLoop;
-
     [SerializeField] private Player _player;
-
     [SerializeField] private int _pawnAttackAmount;
     private float _timeBetweenPawnAttacks;
     private bool _isPawnAttackFinished = false;
     private float _stopDistanceWithPlayer;
     private bool _isRunningTowardsPlayer;
 
-    [SerializeField] private float movementSpeed = 30;
+    [SerializeField] private float _movementSpeed = 30;
     [SerializeField] private ParticleSystem _swordWaveYellow;
 
     [SerializeField] bool _withFireTrailBehind;
     private Vector2 _lastSpawnedFireTrailPos = Vector2.zero;
 
 
-    public void StartPawnAttack(int pawnAttackAmount, float timeBetweenPawnAttacks, float stopDistanceWithPlayer, bool withFireTrailBehind)
+    public void StartPawnAttack(float movementSpeed, int pawnAttackAmount, float timeBetweenPawnAttacks, float stopDistanceWithPlayer, bool withFireTrailBehind)
     {
+        _movementSpeed = movementSpeed;
         Debug.Log($"StartPawnAttackWithParameter {pawnAttackAmount} and {timeBetweenPawnAttacks} and {stopDistanceWithPlayer}");
         _withFireTrailBehind = withFireTrailBehind;
 
@@ -66,6 +64,7 @@ public class PawnAttack : MonoBehaviour
         // if collision with player is happening then it should hurt the player.
         _swordWaveYellow.Play();
         _enemy.GetComponentInChildren<Animator>().SetTrigger("Attack");
+        FindObjectOfType<SoundManager>().PlayTigerAttackSound();  
         GetComponent<Collider2D>().enabled = true;
     }
 
@@ -105,7 +104,7 @@ public class PawnAttack : MonoBehaviour
 
         if (_isRunningTowardsPlayer)
         {
-            float step = movementSpeed * Time.deltaTime;
+            float step = _movementSpeed * Time.deltaTime;
             _enemy.transform.position = Vector2.MoveTowards(_enemy.transform.position, _player.transform.position, step);
             //Debug.Log($"Distance Between Enemy And Player {Vector2.Distance(_enemy.transform.position, _player.transform.position)}");
             if (Vector2.Distance(_enemy.transform.position, _player.transform.position) < _stopDistanceWithPlayer)

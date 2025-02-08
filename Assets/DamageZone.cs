@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class DamageZone : MonoBehaviour
 {
-    private void Start()
-    {
-    }
+    [SerializeField] private float lifeTimeOfTheDamageZone;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,6 +13,7 @@ public class DamageZone : MonoBehaviour
             {
                 collision.transform.GetComponent<Player>().DoPlayerGotHitWithDelay(this.transform, .1f);
                 GetComponent<Animator>().SetTrigger("TriggerGorillaTrap");
+                FindObjectOfType<SoundManager>().PlayTrapClosedSound();
             }
             else
             {
@@ -26,11 +25,12 @@ public class DamageZone : MonoBehaviour
     public void DisableGameObjectFromBanana()
     {
         GetComponent<Animator>().SetTrigger("TriggerGorillaTrap");
+        FindObjectOfType<SoundManager>().PlayTrapClosedSound();
     }
 
     public void CallDisableGameObjectWithDelay(bool calledFromBanana)
     {
-        StartCoroutine(DisableGameObjectWithDelay(7));
+        StartCoroutine(DisableGameObjectWithDelay(lifeTimeOfTheDamageZone));
     }
 
     private IEnumerator DisableGameObjectWithDelay(float delayAmount)

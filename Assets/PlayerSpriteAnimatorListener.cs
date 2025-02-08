@@ -5,6 +5,7 @@ public class PlayerSpriteAnimatorListener : MonoBehaviour
     [SerializeField] private Collider2D _meleeAttackCollider;
     [SerializeField] private Animator _animator;
     [SerializeField] private ParticleSystem _waveAttack;
+    [SerializeField] bool _isThisWelcomeScene;
 
     public void DisableCollider2D(string s)
     {
@@ -22,6 +23,11 @@ public class PlayerSpriteAnimatorListener : MonoBehaviour
     public void DoMeleeAttack()
     {
         _animator.SetTrigger("meleeAttack");
+        FindObjectOfType<SoundManager>().PlayMeleeAttackGorilla();
+        if (_isThisWelcomeScene)
+        {
+            FindObjectOfType<TutorialManager>().SetMeleeAttackColor();
+        }
     }
 
     private void Update()

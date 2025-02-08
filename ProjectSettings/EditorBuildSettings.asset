@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LastBanana_WelcomeScene.unity
+    guid: c001d5f3758c82c4f8ca4e87d51beaa9
+  - enabled: 1
     path: Assets/Scenes/LastBanana_BullFight.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LastBanana_TigerFight.unity
+    guid: 210aa8e66dd86a84a86fc3b301fe3b85
   m_configObjects: {}

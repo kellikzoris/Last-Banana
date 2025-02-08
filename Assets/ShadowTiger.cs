@@ -64,6 +64,7 @@ public class ShadowTiger : MonoBehaviour
         // if collision with player is happening then it should hurt the player.
         _swordWaveYellow.Play();
         _enemy.GetComponentInChildren<Animator>().SetTrigger("Attack");
+        FindObjectOfType<SoundManager>().PlayTigerAttackSound();
         GetComponent<Collider2D>().enabled = true;
         //Debug.Break();
     }

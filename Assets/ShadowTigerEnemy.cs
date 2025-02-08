@@ -6,16 +6,17 @@ public class ShadowTigerEnemy : MonoBehaviour
     [SerializeField] private float _shadowTigerHealth = 20;
     [SerializeField] private Animator _shadowTigerAnimator;
     [SerializeField] Transform _shadowTigerSpriteTransform;
+    [SerializeField] float _timeBetweenAttacks = 1;
 
-    [Button]
-    public void StartAction()
-    {
-        GetComponentInChildren<ShadowTiger>().StartPawnAttack(3, 2, 12, DisableThisGameObject);
-    }
+    //[Button]
+    //public void StartAction()
+    //{
+    //    GetComponentInChildren<ShadowTiger>().StartPawnAttack(3, 2, 12, DisableThisGameObject);
+    //}
 
     public void StartActionFromEnemyLoop(int pawnAttackAmount)
     {
-        GetComponentInChildren<ShadowTiger>().StartPawnAttack(3, 2, 12, DisableThisGameObject);
+        GetComponentInChildren<ShadowTiger>().StartPawnAttack(pawnAttackAmount, _timeBetweenAttacks, 12, DisableThisGameObject);
     }
 
     public void DoEnemyGotHit()

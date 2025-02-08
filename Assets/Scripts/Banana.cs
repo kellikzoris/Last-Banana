@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Banana : MonoBehaviour
@@ -81,7 +80,7 @@ public class Banana : MonoBehaviour
         GetComponent<Rigidbody2D>().angularVelocity = 50 * 30;
     }
 
-    IEnumerator DisableWithDelay()
+    private IEnumerator DisableWithDelay()
     {
         yield return new WaitForSeconds(_lifeTimeOFTheBanana);
         this.gameObject.SetActive(false);
@@ -127,6 +126,8 @@ public class Banana : MonoBehaviour
         Debug.Log($"Collision With {collision.gameObject.name}");
         if (!_isBananaOnGround)
         {
+            FindObjectOfType<SoundManager>().PlayBananaAttackSound();
+
             if (collision.transform.CompareTag("enemy"))
             {
                 collision.transform.GetComponent<Enemy>().DoEnemyGotHit();

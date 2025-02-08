@@ -23,6 +23,18 @@ public class EnemyWeapon : MonoBehaviour
     [SerializeField] private Transform _tornadoReferenceYellow;
     [SerializeField] private Transform _tornadoReferenceRed;
 
+    private Coroutine _spawnTornadoesWithDelayCO;
+
+    public void ResetSpawnTornadoesWithDelayCO()
+    {
+        if (_spawnTornadoesWithDelayCO != null)
+        {
+            GetComponentInChildren<Animator>().SetBool("360Attack", false);
+            _swordWhirlwindYellow.gameObject.SetActive(false);
+            StopCoroutine(_spawnTornadoesWithDelayCO);
+        }
+    }
+
     public void ShootPlayer()
     {
         Vector3 direction = (_player.transform.position - this.transform.position).normalized;
@@ -74,6 +86,7 @@ public class EnemyWeapon : MonoBehaviour
 
     public void StompAttack(float stompMaxScale)
     {
+        FindObjectOfType<SoundManager>().PlayBullKickingGround();
         Debug.Log("StompAttack");
         GetComponentInChildren<StompAttack>().SetStompParameter(stompMaxScale);
         GetComponentInChildren<Animator>().SetTrigger("isJumping");
@@ -138,7 +151,7 @@ public class EnemyWeapon : MonoBehaviour
         _swordWhirlwindYellow.gameObject.SetActive(true);
         if (isSpawningTornadoes)
         {
-            StartCoroutine(SpawnTornadoesWithDelayCO(numberOfTornadoes, delayBetweenTornadoes,tornadoType));
+            _spawnTornadoesWithDelayCO = StartCoroutine(SpawnTornadoesWithDelayCO(numberOfTornadoes, delayBetweenTornadoes, tornadoType));
         }
     }
 

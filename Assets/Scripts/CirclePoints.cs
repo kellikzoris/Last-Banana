@@ -75,7 +75,7 @@ public class CirclePoints : MonoBehaviour
                 Debug.Log("Touched The Enemy");
                 trajectoryTimeOnTarget += Time.deltaTime;
                 lineRenderer.material.color = Color.Lerp(Color.white, Color.red, trajectoryTimeOnTarget / 2);
-                if (trajectoryTimeOnTarget > 2)
+                if (trajectoryTimeOnTarget > .5f)
                 {
                     Debug.Log("LockedOnTarget");
                 }
@@ -108,19 +108,19 @@ public class CirclePoints : MonoBehaviour
         }
 
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            lockedOnTarget = !lockedOnTarget;
-            if (lockedOnTarget == true)
-            {
-                Transform enemyTransform = FindObjectOfType<Enemy>().transform;
-                player.SetLookAtTarget(enemyTransform);
-            }
-            else
-            {
-                player.SetLookAtTarget(null);
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    lockedOnTarget = !lockedOnTarget;
+        //    if (lockedOnTarget == true)
+        //    {
+        //        Transform enemyTransform = FindObjectOfType<Enemy>().transform;
+        //        player.SetLookAtTarget(enemyTransform);
+        //    }
+        //    else
+        //    {
+        //        player.SetLookAtTarget(null);
+        //    }
+        //}
 #endif
         if (Input.GetMouseButton(1))
         {

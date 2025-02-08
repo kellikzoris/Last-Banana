@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -11,7 +12,6 @@ public class Player : MonoBehaviour
     [SerializeField] private TMP_Text _playerHealthTextField;
     [SerializeField] private Image _playerHealthLeft;
 
-    private Coroutine _returnBackToOriginalColorCO;
     public bool _enableControls = true;
     private Transform _lookAtTarget;
     private Coroutine _dashCoroutine;
@@ -27,9 +27,18 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator _playerAnimator;
     [SerializeField] private ParticleSystem _dashTrail;
 
+    [SerializeField] private bool isThisWelcomeScene;
+
+    private bool _isPlayerDead = false;
+
     public void SetLookAtTarget(Transform transform)
     {
         _lookAtTarget = transform;
+    }
+
+    private void Start()
+    {
+        _playerHealthLeft.fillAmount = (float)_playerHealth / 100;
     }
 
     public void RegenerateHealthAfterBananaEaten()
@@ -43,6 +52,30 @@ public class Player : MonoBehaviour
         _playerHealthLeft.fillAmount = (float)_playerHealth / 100;
     }
 
+    private void DoAfterPlayerDead()
+    {
+        //Below section should be called when in tiger fight scene.
+        if (SceneManager.GetActiveScene().name == "LastBanana_TigerFight")
+        {
+            FindObjectOfType<TrackGorillaLocation>(true).ResetDarkenEnvironment();
+        }
+
+        FindObjectOfType<EnemyWeapon>().ResetSpawnTornadoesWithDelayCO();
+        FindObjectOfType<EnemyLoop>().StopEnemyMovementCycle();
+        FindObjectOfType<EnemyLoop>().enabled = false;
+
+        //Below line of code should be applicable both in tiger and bull fight sections.
+        FindObjectOfType<LineRendererDrawer>().DisableAttacks();
+        DisableControls();
+        _playerAnimator.SetBool("isDead", true);
+        FindObjectOfType<SoundManager>().PlayLostSound();
+        FindObjectOfType<EatABananaFromBag>(true).gameObject.SetActive(false);
+
+        _isPlayerDead = true;
+
+        FindObjectOfType<LevelEndLogic>().CallLevelEndCondition(false);
+    }
+
     public void DoPlayerGotHit(Transform gotHitFrom)
     {
         _playerAnimator.SetTrigger("gotDamage");
@@ -54,7 +87,20 @@ public class Player : MonoBehaviour
         if (_playerHealth <= 0)
         {
             Debug.Log("Player already eliminated");
+            _playerHealthLeft.fillAmount = (float)_playerHealth / 100;
+
+            DoAfterPlayerDead();
+            return;
         }
+        if (isThisWelcomeScene)
+        {
+            FindObjectOfType<TutorialManager>(true).DoApproachMonkeyImage();
+            if (_playerHealth <= 30)
+            {
+                _playerHealth = 30;
+            }
+        }
+
         _playerHealthLeft.fillAmount = (float)_playerHealth / 100;
     }
 
@@ -74,6 +120,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (_isPlayerDead)
+        {
+            return;
+        }
+
         if (collision.collider.tag.Contains("banana"))
         {
             if (!collision.transform.GetComponent<Banana>().GetIsBananaOnTheFly())
@@ -159,7 +210,10 @@ public class Player : MonoBehaviour
         Vector2 kickBackDirection = this.transform.position - kickBackFrom.transform.position;
         GetComponent<Rigidbody2D>().velocity = kickBackDirection.normalized * 10;
         yield return new WaitForSeconds(.1f);
-        EnableControls();
+        if (!_isPlayerDead)
+        {
+            EnableControls();
+        }
     }
 
     private IEnumerator DoDashCoroutine()
@@ -196,13 +250,13 @@ public class Player : MonoBehaviour
             StartCoroutine(DoKickBackEffect(enemy.transform));
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (_dashCoroutine == null)
-            {
-                _dashCoroutine = StartCoroutine(DoDashCoroutine());
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    if (_dashCoroutine == null)
+        //    {
+        //        _dashCoroutine = StartCoroutine(DoDashCoroutine());
+        //    }
+        //}
 
 #endif
     }

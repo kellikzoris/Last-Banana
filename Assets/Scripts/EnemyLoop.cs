@@ -78,6 +78,8 @@ public class EnemyLoop : MonoBehaviour
 
         [Space(10)]
         public bool isRunningTowardsPlayer;
+        [Range(30, 50)]
+        public float movementSpeedWhileRunningTowardsPlayer;
 
         [Range(12, 15)]
         public float stopDistanceWithPlayer;
@@ -122,6 +124,7 @@ public class EnemyLoop : MonoBehaviour
         public bool isPlantingATrap = false;
 
         public int trapAmount;
+        public float timeBetweenTraps;
 
         [Space(10)]
         public bool isShadowAttacking;
@@ -154,10 +157,22 @@ public class EnemyLoop : MonoBehaviour
 
     [SerializeField] private GorillaTrapPlanter _gorillaTrapPlanter;
 
+    private Coroutine _enemyCycleCO;
+    private bool _isEnemyDead = false;
+
     private void Start()
     {
         currentIndex = 0;
-        StartCoroutine(DoEnemyMovementCycles());
+        _enemyCycleCO = StartCoroutine(DoEnemyMovementCycles());
+    }
+
+    public void StopEnemyMovementCycle()
+    {
+        _isEnemyDead = true;
+        if (_enemyCycleCO != null)
+        {
+            StopCoroutine(_enemyCycleCO);
+        }
     }
 
     private List<EnemyMovement> HandleBossPhaseChanges()
@@ -166,13 +181,13 @@ public class EnemyLoop : MonoBehaviour
 
         Debug.Log($"enemy health {enemyHealth}");
 
-        if (enemyHealth <= 25)
+        if (enemyHealth <= 35)
         {
             _enemyAnimator.SetLayerWeight(0, 0);
             _enemyAnimator.SetLayerWeight(1, 1);
             return enemyMovementsForTheThirdPhase;
         }
-        else if ((enemyHealth <= 50) && (25 < enemyHealth))
+        else if ((enemyHealth <= 70) && (35 < enemyHealth))
         {
             return enemyMovementsForTheSecondPhase;
         }
@@ -202,13 +217,6 @@ public class EnemyLoop : MonoBehaviour
         isMoving = currentEnemyMovement.isMoving;
 
         isRunningTowardsPlayer = currentEnemyMovement.isRunningTowardsPlayer;
-
-        isStompAttack = currentEnemyMovement.isStompAttack;
-
-        if (isStompAttack)
-        {
-            _stompAttackInCyclesCO = StartCoroutine(StompAttackInCycles(currentEnemyMovement.stompSize, currentEnemyMovement.stompAmount));
-        }
 
         isChargeAttackRun = currentEnemyMovement.isChargeAttackRun;
         withFireTrailBehind = currentEnemyMovement.withFireTrailBehind;
@@ -266,7 +274,9 @@ public class EnemyLoop : MonoBehaviour
 
         if (isRunningTowardsPlayer)
         {
-            GetComponentInChildren<PawnAttack>().StartPawnAttack(currentEnemyMovement.amountOfPawnAttacks, currentEnemyMovement.timeDelayBetweenPawnAttacks, currentEnemyMovement.stopDistanceWithPlayer, currentEnemyMovement.withFireTrailBehind);
+            GetComponentInChildren<PawnAttack>().StartPawnAttack(currentEnemyMovement.movementSpeedWhileRunningTowardsPlayer, 
+                currentEnemyMovement.amountOfPawnAttacks, currentEnemyMovement.timeDelayBetweenPawnAttacks, 
+                currentEnemyMovement.stopDistanceWithPlayer, currentEnemyMovement.withFireTrailBehind);
             yield return new WaitUntil(() => GetComponentInChildren<PawnAttack>().GetPawnAttackCycleFinished());
             GetComponentInChildren<PawnAttack>().ResetIsPawnAttackFinished();
         }
@@ -296,14 +306,16 @@ public class EnemyLoop : MonoBehaviour
 
         if (isPlantingATrap)
         {
-            _gorillaTrapPlanter.StartPlantingATrap(currentEnemyMovement.trapAmount);
+            _gorillaTrapPlanter.StartPlantingATrap(currentEnemyMovement.trapAmount, currentEnemyMovement.timeBetweenTraps);
             yield return new WaitUntil(() => _gorillaTrapPlanter.IsTheCycleFinised() == true);
             _gorillaTrapPlanter.ResetTrapCycleFinished();
         }
 
-        if (isStompAttack)
+        if (currentEnemyMovement.isStompAttack)
         {
+            _stompAttackInCyclesCO = StartCoroutine(StompAttackInCycles(currentEnemyMovement.stompSize, currentEnemyMovement.stompAmount));
             yield return new WaitUntil(() => _stompAttackInCyclesCO == null);
+            _currentAmountInStompAttack = 0;
         }
         else if (!currentEnemyMovement.isEndConditionForReachingTarget)
         {
@@ -327,7 +339,10 @@ public class EnemyLoop : MonoBehaviour
             GetComponent<EnemyWeapon>().Stop360Attack();
         }
 
-        StartCoroutine(DoEnemyMovementCycles());
+        if (!_isEnemyDead)
+        {
+            _enemyCycleCO = StartCoroutine(DoEnemyMovementCycles());
+        }
     }
 
     private IEnumerator StompAttackInCycles(float stompMaxScale, int loopAmount)
@@ -379,7 +394,7 @@ public class EnemyLoop : MonoBehaviour
             float step = _currentPhaseEnemyMovement[currentIndex].movementSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, step);
 
-            Debug.Log($"Vector2.Distance(transform.position, targetPosition) {Vector2.Distance(transform.position, targetPosition)}");
+            //Debug.Log($"Vector2.Distance(transform.position, targetPosition) {Vector2.Distance(transform.position, targetPosition)}");
             //Debug.Log($"Distance To Target Position {Vector2.Distance(this.transform.position, targetPosition)}");
             //if (Vector2.Distance(this.transform.position, targetPosition) < 2f)
             //{

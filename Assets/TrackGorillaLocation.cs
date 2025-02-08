@@ -11,10 +11,22 @@ public class TrackGorillaLocation : MonoBehaviour
     [SerializeField] private int _circleSize;
     [SerializeField] private int _backgroundImageSize;
 
+    private Coroutine _darkenEnvironmentCO;
+
+    public void ResetDarkenEnvironment()
+    {
+        if (_darkenEnvironmentCO != null)
+        {
+            StopCoroutine(_darkenEnvironmentCO);
+        }
+        _maskImageRectTransform.sizeDelta = _backgroundImageSize * Vector2.one;
+        _lockOnPlayer = false;
+    }
+
     public void SetTrackGorilla(int timeAmountForThisAction)
     {
         _lockOnPlayer = true;
-        StartCoroutine(TimerForTrackGorillaLocation(timeAmountForThisAction));
+        _darkenEnvironmentCO = StartCoroutine(TimerForTrackGorillaLocation(timeAmountForThisAction));
     }
 
     private IEnumerator TimerForTrackGorillaLocation(float timeAmountForThisAction)

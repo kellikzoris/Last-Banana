@@ -24,7 +24,9 @@ public class LineRendererDrawer : MonoBehaviour
 
     [SerializeField] private Transform _debuggerPoint1;
     [SerializeField] private Transform _debuggerPoint2;
-    bool _disableAttacks = false;
+    private bool _disableAttacks = false;
+
+    [SerializeField] private bool _isThisWelcomeScene;
 
     public void DisableAttacks()
     {
@@ -63,7 +65,7 @@ public class LineRendererDrawer : MonoBehaviour
             {
                 trajectoryTimeOnTarget += Time.deltaTime;
                 lineRenderer.material.color = Color.Lerp(Color.white, Color.red, trajectoryTimeOnTarget / 2);
-                if (trajectoryTimeOnTarget > 2)
+                if (trajectoryTimeOnTarget > 1f)
                 {
                     ToggleLockedOnTarget();
                     Debug.Log("LockedOnTarget");
@@ -100,6 +102,11 @@ public class LineRendererDrawer : MonoBehaviour
 
     private void ToggleLockedOnTarget()
     {
+        if (_isThisWelcomeScene)
+        {
+            FindObjectOfType<TutorialManager>().SetLockedOnTargetColor();
+        }
+
         lockedOnTarget = !lockedOnTarget;
         if (lockedOnTarget == true)
         {
@@ -117,7 +124,6 @@ public class LineRendererDrawer : MonoBehaviour
 
     private void Update()
     {
-
         if (lockedOnTarget)
         {
             Vector3[] positions = new Vector3[] { player.transform.position, FindObjectOfType<Enemy>().transform.position };
@@ -151,6 +157,11 @@ public class LineRendererDrawer : MonoBehaviour
 
         if (Input.GetMouseButtonUp(1))
         {
+            if (_isThisWelcomeScene)
+            {
+                FindObjectOfType<TutorialManager>().SetRightClickAttackColor();
+            }
+
             float lengthOfLineRenderer = Vector2.Distance(lineRenderer.GetPosition(1), lineRenderer.GetPosition(0));
             lineRenderer.positionCount = 0;
             isLineRendererDrawn = false;
